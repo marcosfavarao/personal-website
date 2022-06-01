@@ -1,3 +1,14 @@
+import { Home } from './pages';
+import { Overpage } from './components';
+
+import { GlobalStyle } from './common/styles/globalStyles';
+
 export const App = () => {
-  return <h1>Created project using create-react-app</h1>;
+  return (
+    <>
+      <Home />
+      <Overpage />
+      <GlobalStyle />
+    </>
+  );
 };
