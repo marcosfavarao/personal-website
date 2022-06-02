@@ -1,20 +1,24 @@
-import { useState } from 'react';
+import { ReactNode } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 
 import { Container, ContentPage } from './overpage.styles';
 
 interface OverpageProps {
+  children: ReactNode;
   showPageContent: boolean;
-  hidePageContent: () => void;
+  onClosePageContent: () => void;
 }
 
-export const Overpage = () => {
-  const [showPageContent, setShowPageContent] = useState(false); // ! Substituir por valores vindos de props externas
-
+export const Overpage = ({
+  children,
+  showPageContent,
+  onClosePageContent,
+}: OverpageProps) => {
   return (
     <Container>
       <ContentPage showPageContent={showPageContent}>
-        <IoIosArrowDown onClick={() => setShowPageContent(false)} />
+        <IoIosArrowDown onClick={onClosePageContent} />
+        {children}
       </ContentPage>
     </Container>
   );
