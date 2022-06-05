@@ -1,4 +1,4 @@
-import { useNavigation } from '../../hooks/useNavigation';
+import { useNavigation } from '../../hooks';
 
 import profileImg from '../../common/assets/images/profile-image.png';
 

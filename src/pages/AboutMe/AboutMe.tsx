@@ -1,4 +1,4 @@
-import { useNavigation } from '../../hooks/useNavigation';
+import { useNavigation } from '../../hooks';
 import { Overpage } from '../../components';
 
 import { Container } from './aboutme.styles';
