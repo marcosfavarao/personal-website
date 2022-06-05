@@ -1,14 +1,16 @@
+import { useNavigation } from '../../hooks/useNavigation';
 import { Overpage } from '../../components';
+
 import { Container } from './aboutme.styles';
 
-interface AboutMeProps {
-  openPage: boolean;
-  onClosePage: () => void;
-}
+export const AboutMe = () => {
+  const { toggleAboutMePage, setToggleAboutMePage } = useNavigation();
 
-export const AboutMe = ({ openPage, onClosePage }: AboutMeProps) => {
   return (
-    <Overpage showPageContent={openPage} onClosePageContent={onClosePage}>
+    <Overpage
+      showPageContent={toggleAboutMePage}
+      onClosePageContent={() => setToggleAboutMePage(false)}
+    >
       <Container>
         AboutMe
         <h1>About</h1>

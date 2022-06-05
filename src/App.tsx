@@ -1,21 +1,14 @@
-import { useState } from 'react';
-
+import { NavigationProvider } from './hooks/useNavigation';
 import { Home, AboutMe } from './pages';
 
 import { GlobalStyle } from './common/styles/globalStyles';
 
 export const App = () => {
-  const [isAboutMePageOpen, setIsAboutMePageOpen] = useState(false);
-
-  const handleOpenAboutMePage = () => setIsAboutMePageOpen(true);
-
-  const handleClosePages = () => setIsAboutMePageOpen(false);
-
   return (
-    <>
-      <Home onOpenAboutMePage={handleOpenAboutMePage} />
-      <AboutMe openPage={isAboutMePageOpen} onClosePage={handleClosePages} />
+    <NavigationProvider>
+      <Home />
+      <AboutMe />
       <GlobalStyle />
-    </>
+    </NavigationProvider>
   );
 };

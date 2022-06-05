@@ -62,9 +62,6 @@ export const Container = styled.div`
 export const ContentPage = styled.div<ContentPageProps>`
   background: var(--color-background);
 
-  transform: translateY(100vh); // Content is put out of view
-  opacity: 0; // Content is hidded
-
   width: 100%;
   height: 98vh;
 
@@ -77,27 +74,21 @@ export const ContentPage = styled.div<ContentPageProps>`
   box-shadow: 0px -4px 8px -1px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   /* animation: ${showContentAnimation} 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    both; */
-  /* animation: ${hideContentAnimation} 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+  animation: ${hideContentAnimation} 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53)
     both; */
 
   ${({ showPageContent }) =>
-    showPageContent &&
-    css`
-      animation: ${showContentAnimation} 0.8s
-        cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    `}
-
-  /* ${({ showPageContent }) =>
     showPageContent
       ? css`
-          animation: ${showContentAnimation} 0.8s
+          animation: ${showContentAnimation} 0.6s
             cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
         `
       : css`
-          animation: ${hideContentAnimation} 0.8s
+          animation: ${hideContentAnimation} 0.6s
             cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-        `} */
+        `}
+
   svg {
     width: 50px;
     height: 50px;
