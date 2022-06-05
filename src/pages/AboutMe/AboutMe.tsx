@@ -12,8 +12,8 @@ export const AboutMe = () => {
       onClosePageContent={() => setToggleAboutMePage(false)}
     >
       <Container>
-        AboutMe
-        <h1>About</h1>
+        <h1>About Me</h1>
+        <p>About Me</p>
       </Container>
     </Overpage>
   );
