@@ -18,6 +18,7 @@ const showContentAnimation = keyframes`
     opacity: 1;
   }
 `;
+
 const hideContentAnimation = keyframes`
   0% {
     -webkit-transform: translateY(0vh);
@@ -41,6 +42,7 @@ const arrowOnFocusAnimation = keyframes`
     transform: translate3d(-50%, 4px, 0);
   }
 `;
+
 const arrowOutFocusAnimation = keyframes`
   0% {
     -webkit-transform: translate3d(-50%, 4px, 0);

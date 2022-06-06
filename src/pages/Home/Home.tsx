@@ -1,4 +1,5 @@
 import { useNavigation } from '../../hooks';
+import { Switch } from '../../components';
 
 import profileImg from '../../common/assets/images/profile-image.png';
 
@@ -37,6 +38,7 @@ const NavbarLinks = () => {
 export const Home = () => {
   return (
     <Container>
+      <Switch />
       <Profile>
         <img src={profileImg} alt="profile" />
 
