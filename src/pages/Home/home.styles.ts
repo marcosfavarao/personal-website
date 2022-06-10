@@ -139,9 +139,8 @@ export const Button = styled.button`
 
   font-size: 1.75rem;
   font-weight: 600;
-  text-align: center;
-
   line-height: 32px;
+  text-align: center;
   text-transform: capitalize;
 
   -webkit-animation: ${buttonOutFocusAnimation} 0.5s
@@ -150,7 +149,6 @@ export const Button = styled.button`
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   transition: color 0.25s;
-
   &:hover {
     color: var(--color-green);
 

@@ -1,11 +1,12 @@
 import {
-  createContext,
-  useMemo,
-  useState,
   ReactNode,
   Dispatch,
   SetStateAction,
+  createContext,
+  useState,
+  useEffect,
   useContext,
+  useMemo,
 } from 'react';
 
 interface NavigationProviderProps {
@@ -13,6 +14,7 @@ interface NavigationProviderProps {
 }
 
 interface NavigationState {
+  onAnyPageOpen: boolean;
   toggleContactPage: boolean;
   toggleProjectsPage: boolean;
   toggleAboutMePage: boolean;
@@ -26,6 +28,7 @@ interface NavigationState {
 }
 
 const DEFAULT_VALUE = {
+  onAnyPageOpen: false,
   toggleContactPage: false,
   toggleProjectsPage: false,
   toggleAboutMePage: false,
@@ -41,6 +44,8 @@ const DEFAULT_VALUE = {
 const NavigationContext = createContext<NavigationState>(DEFAULT_VALUE);
 
 export const NavigationProvider = ({ children }: NavigationProviderProps) => {
+  const [onAnyPageOpen, setOnAnyPageOpen] = useState<boolean>(false);
+
   const [toggleContactPage, setToggleContactPage] = useState<boolean>(
     DEFAULT_VALUE.toggleContactPage,
   );
@@ -57,8 +62,19 @@ export const NavigationProvider = ({ children }: NavigationProviderProps) => {
     DEFAULT_VALUE.toggleSkillsPage,
   );
 
+  useEffect(() => {
+    setOnAnyPageOpen((callback) => !callback);
+  }, [
+    toggleContactPage,
+    toggleProjectsPage,
+    toggleAboutMePage,
+    toggleExperiencesPage,
+    toggleSkillsPage,
+  ]);
+
   const provider = useMemo(
     () => ({
+      onAnyPageOpen,
       toggleContactPage,
       toggleProjectsPage,
       toggleAboutMePage,
@@ -71,6 +87,7 @@ export const NavigationProvider = ({ children }: NavigationProviderProps) => {
       setToggleSkillsPage,
     }),
     [
+      onAnyPageOpen,
       toggleAboutMePage,
       toggleContactPage,
       toggleExperiencesPage,

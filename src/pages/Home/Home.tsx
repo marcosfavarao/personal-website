@@ -1,8 +1,10 @@
+import { FaSun } from 'react-icons/fa';
+import { RiMoonClearFill } from 'react-icons/ri';
+
 import { useNavigation } from '../../hooks';
-import { Switch } from '../../components';
+import { Switcher } from '../../components';
 
 import profileImg from '../../common/assets/images/profile-image.png';
-
 import { Container, Profile, Navbar, Button } from './home.styles';
 
 const NavbarLinks = () => {
@@ -38,7 +40,8 @@ const NavbarLinks = () => {
 export const Home = () => {
   return (
     <Container>
-      <Switch />
+      <Switcher />
+
       <Profile>
         <img src={profileImg} alt="profile" />
 

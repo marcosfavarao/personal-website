@@ -1,6 +1,6 @@
 import styled, { css, keyframes } from 'styled-components';
 
-// Interfaces
+// Interfaces and Prop Types
 interface ContentPageProps {
   showPageContent: boolean;
 }
@@ -83,10 +83,14 @@ export const ContentPage = styled.div<ContentPageProps>`
   ${({ showPageContent }) =>
     showPageContent
       ? css`
+          -webkit-animation: ${showContentAnimation} 0.6s
+            cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
           animation: ${showContentAnimation} 0.6s
             cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
         `
       : css`
+          -webkit-animation: ${hideContentAnimation} 0.6s
+            cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
           animation: ${hideContentAnimation} 0.6s
             cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
         `}
