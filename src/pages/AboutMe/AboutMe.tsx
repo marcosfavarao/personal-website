@@ -1,8 +1,6 @@
 import { useNavigation } from '../../hooks';
 import { Overpage } from '../../components';
 
-import { Container } from './aboutme.styles';
-
 export const AboutMe = () => {
   const { toggleAboutMePage, setToggleAboutMePage } = useNavigation();
 
@@ -10,11 +8,9 @@ export const AboutMe = () => {
     <Overpage
       showPageContent={toggleAboutMePage}
       onClosePageContent={() => setToggleAboutMePage(false)}
+      pageTitle="About Me"
     >
-      <Container>
-        <h1>About Me</h1>
-        <p>About Me</p>
-      </Container>
+      <div />
     </Overpage>
   );
 };

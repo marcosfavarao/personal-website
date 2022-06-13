@@ -40,7 +40,9 @@ const NavbarLinks = () => {
 export const Home = () => {
   return (
     <Container>
-      <Switcher />
+      <Switcher
+        dynamicOnChangeIcon={{ leftIcon: FaSun, rightIcon: RiMoonClearFill }}
+      />
 
       <Profile>
         <img src={profileImg} alt="profile" />

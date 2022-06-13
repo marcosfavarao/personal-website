@@ -1,68 +1,36 @@
 import styled, { css, keyframes } from 'styled-components';
 
-// Interfaces and Prop Types
-interface ContentPageProps {
+// Interfaces and Props
+interface ContainerProps {
   showPageContent: boolean;
 }
 
+interface HeaderProps {
+  iconSize: number;
+}
+
 // Animations
-const showContentAnimation = keyframes`
-  0% {
-    -webkit-transform: translateY(100vh);
-    transform: translateY(100vh);
+const showElement = keyframes`
+  from {
     opacity: 0;
   }
-  100% {
-    -webkit-transform: translateY(0vh);
-    transform: translateY(0vh);
+  to {
     opacity: 1;
   }
 `;
 
-const hideContentAnimation = keyframes`
-  0% {
-    -webkit-transform: translateY(0vh);
-    transform: translateY(0vh);
+const hideElement = keyframes`
+  from {
     opacity: 1;
   }
-  100% {
-    -webkit-transform: translateY(100vh);
-    transform: translateY(100vh);
+  to {
     opacity: 0;
-  }
-`;
-
-const arrowOnFocusAnimation = keyframes`
-  0% {
-    -webkit-transform: translate3d(-50%, 0, 0);
-    transform: translate3d(-50%, 0, 0);
-  }
-  100% {
-    -webkit-transform: translate3d(-50%, 4px, 0);
-    transform: translate3d(-50%, 4px, 0);
-  }
-`;
-
-const arrowOutFocusAnimation = keyframes`
-  0% {
-    -webkit-transform: translate3d(-50%, 4px, 0);
-    transform: translate3d(-50%, 4px, 0);
-  }
-  100% {
-    -webkit-transform: translate3d(-50%, 0, 0);
-    transform: translate3d(-50%, 0, 0);
   }
 `;
 
 // Code Style
-export const Container = styled.div`
-  width: 100%;
-  position: relative;
-  z-index: 99;
-`;
-
-export const ContentPage = styled.div<ContentPageProps>`
-  background: var(--color-background);
+export const Container = styled.div<ContainerProps>`
+  background-color: var(--color-background);
 
   width: 100%;
   height: 98vh;
@@ -70,51 +38,68 @@ export const ContentPage = styled.div<ContentPageProps>`
   position: fixed;
   bottom: 0;
   left: 0;
+  right: 0;
 
   border: 0;
   border-radius: 25px 25px 0 0;
   box-shadow: 0px -4px 8px -1px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  /* animation: ${showContentAnimation} 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    both;
-  animation: ${hideContentAnimation} 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-    both; */
+
+  z-index: 99;
+
+  transform: ${({ showPageContent }) =>
+    showPageContent ? `translateY(0vh)` : `translateY(100vh)`};
+  transition: all 800ms cubic-bezier(0.39, 0.575, 0.565, 1);
 
   ${({ showPageContent }) =>
     showPageContent
       ? css`
-          -webkit-animation: ${showContentAnimation} 0.6s
-            cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-          animation: ${showContentAnimation} 0.6s
-            cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: ${showElement} 800ms;
         `
       : css`
-          -webkit-animation: ${hideContentAnimation} 0.6s
-            cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-          animation: ${hideContentAnimation} 0.6s
-            cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+          animation: ${hideElement} 800ms;
         `}
+`;
+
+export const Content = styled.main`
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+`;
+
+export const Header = styled.header<HeaderProps>`
+  display: grid;
+  place-items: center;
+  user-select: none;
 
   svg {
-    width: 50px;
-    height: 50px;
+    /* => Another way for centering an SVG element.
+     * display: block;
+     * margin: 0 auto;
+    */
 
-    margin: 2rem 0;
+    width: ${({ iconSize }) => iconSize || '50'}px;
+    height: ${({ iconSize }) => iconSize || '50'}px;
 
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
+    margin: 2rem;
 
     cursor: pointer;
 
-    -webkit-animation: ${arrowOutFocusAnimation} 0.5s linear both;
-    animation: ${arrowOutFocusAnimation} 0.5s linear both;
-
-    transition: all 0.5s;
+    transition: all 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
     &:hover {
       color: var(--color-green);
-      -webkit-animation: ${arrowOnFocusAnimation} 0.5s linear both;
-      animation: ${arrowOnFocusAnimation} 0.5s linear both;
+      transform: translateY(8px);
     }
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    font-size: 3rem;
+    font-weight: 700;
+
+    line-height: 64px;
+    text-transform: capitalize;
   }
 `;

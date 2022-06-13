@@ -1,10 +1,23 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 // Interfaces and Prop Types
 interface TogglerProps {
   onActivate: boolean;
 }
 
+// Animations
+const showComponent = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(75px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+`;
+
+// Code Style
 export const Container = styled.div`
   background-color: #c0c0c0;
 
@@ -23,6 +36,7 @@ export const Container = styled.div`
   z-index: 100;
 
   transition: 300ms all;
+  animation: ${showComponent} 800ms;
 `;
 
 export const Toggler = styled.button<TogglerProps>`

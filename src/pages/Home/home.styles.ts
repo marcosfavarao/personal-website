@@ -75,9 +75,9 @@ export const Profile = styled.div`
   text-align: center;
   user-select: none;
 
-  -webkit-animation: ${profileAnimation} 0.75s
+  -webkit-animation: ${profileAnimation} 750ms
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: ${profileAnimation} 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: ${profileAnimation} 750ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   img {
     width: 256px;
@@ -149,7 +149,8 @@ export const Button = styled.button`
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   transition: color 0.25s;
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--color-green);
 
     -webkit-animation: ${buttonInFocusAnimation} 0.5s

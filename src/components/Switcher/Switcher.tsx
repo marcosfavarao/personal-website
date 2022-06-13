@@ -10,21 +10,21 @@ type IconProps = {
 
 interface SwitcherProps {
   icon?: ComponentType<IconBaseProps>;
-  dinamicOnChangeIcon?: IconProps;
+  dynamicOnChangeIcon?: IconProps;
 }
 
 export const Switcher = ({
   icon: Icon,
-  dinamicOnChangeIcon,
+  dynamicOnChangeIcon,
 }: SwitcherProps) => {
   const [toggle, setToggle] = useState<boolean>(false);
   let Icons;
 
   if (Icon) {
     Icons = <Icon />;
-  } else if (dinamicOnChangeIcon?.leftIcon || dinamicOnChangeIcon?.rightIcon) {
-    const LeftIcon = dinamicOnChangeIcon?.leftIcon;
-    const RightIcon = dinamicOnChangeIcon?.rightIcon;
+  } else if (dynamicOnChangeIcon?.leftIcon || dynamicOnChangeIcon?.rightIcon) {
+    const LeftIcon = dynamicOnChangeIcon?.leftIcon;
+    const RightIcon = dynamicOnChangeIcon?.rightIcon;
 
     Icons = !toggle ? <LeftIcon /> : <RightIcon />;
   }
