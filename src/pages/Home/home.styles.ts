@@ -59,7 +59,7 @@ export const Container = styled.div`
   position: relative;
 `;
 
-export const Profile = styled.div`
+export const Profile = styled.section`
   width: 100%;
   max-width: 1200px;
 

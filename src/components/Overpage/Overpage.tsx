@@ -30,7 +30,7 @@ export const Overpage = ({
           ) : (
             <IoIosArrowDown onClick={onClosePageContent} />
           )}
-          <h1>{pageTitle}</h1>
+          {pageTitle && <h1>{pageTitle}</h1>}
         </Header>
         {children}
       </Content>
