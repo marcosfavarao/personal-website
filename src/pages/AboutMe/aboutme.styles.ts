@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  padding: 0 1rem;
+  padding: 0 2rem;
 `;
 
 export const Header = styled.header`
@@ -23,6 +23,10 @@ export const Header = styled.header`
 
 export const Content = styled.section`
   width: 100%;
+`;
+
+export const Block = styled.div`
+  width: 100%;
   user-select: none;
   text-transform: none;
   font-size: 1rem;
@@ -30,6 +34,6 @@ export const Content = styled.section`
   text-align: left;
   margin: 2rem auto;
   p {
-    padding: 0 1rem;
+    margin-left: 22px;
   }
 `;

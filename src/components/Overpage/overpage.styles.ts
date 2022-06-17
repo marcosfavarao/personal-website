@@ -35,6 +35,8 @@ export const Container = styled.div<ContainerProps>`
   width: 100%;
   height: 98vh;
 
+  overflow: auto;
+
   position: fixed;
   bottom: 0;
   left: 0;
