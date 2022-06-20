@@ -56,7 +56,12 @@ const buttonOutFocusAnimation = keyframes`
 // Code Style
 export const Container = styled.div`
   width: 100%;
-  position: relative;
+  /* height: 100vh; */
+`;
+
+export const Content = styled.div`
+  width: 100%;
+  margin-top: 5rem;
 `;
 
 export const Profile = styled.section`
@@ -64,8 +69,6 @@ export const Profile = styled.section`
   max-width: 1200px;
 
   margin: 0 auto;
-  margin-top: 6rem;
-  padding: 1rem;
 
   display: flex;
   align-items: center;
@@ -137,7 +140,7 @@ export const Button = styled.button`
   margin: 0.5rem;
   border: 0;
 
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 600;
   line-height: 32px;
   text-align: center;

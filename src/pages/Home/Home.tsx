@@ -5,7 +5,7 @@ import { useNavigation } from '../../hooks';
 import { Switcher } from '../../components';
 
 import profileImg from '../../common/assets/images/profile-image.png';
-import { Container, Profile, Navbar, Button } from './home.styles';
+import { Container, Content, Profile, Navbar, Button } from './home.styles';
 
 const NavbarLinks = () => {
   const {
@@ -41,19 +41,23 @@ export const Home = () => {
   return (
     <Container>
       <Switcher
-        dynamicOnChangeIcon={{ leftIcon: FaSun, rightIcon: RiMoonClearFill }}
+        onChange={() => {
+          console.log('ok');
+        }}
+        onCheck
       />
+      <Content>
+        <Profile>
+          <img src={profileImg} alt="profile" />
 
-      <Profile>
-        <img src={profileImg} alt="profile" />
+          <h1>Marcos A. L. Favarão</h1>
+          <h2>Web Front-End Developer</h2>
+        </Profile>
 
-        <h1>Marcos A. L. Favarão</h1>
-        <h2>Web Front-End Developer</h2>
-      </Profile>
-
-      <Navbar>
-        <NavbarLinks />
-      </Navbar>
+        <Navbar>
+          <NavbarLinks />
+        </Navbar>
+      </Content>
     </Container>
   );
 };

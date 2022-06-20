@@ -2,7 +2,7 @@ import styled, { css, keyframes } from 'styled-components';
 
 // Interfaces and Prop Types
 interface TogglerProps {
-  onActivate: boolean;
+  onCheck: boolean;
 }
 
 // Animations
@@ -19,30 +19,20 @@ const showComponent = keyframes`
 
 // Code Style
 export const Container = styled.div`
-  background-color: #c0c0c0;
-
   width: 50px;
   height: 20px;
+  background-color: ${({ theme }) => theme.colors.primary};
 
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 32px;
+  border: 0;
+  border-radius: 20px;
 
   position: fixed;
-  top: 60px;
-  right: 65px;
-
-  box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
-
-  z-index: 100;
-
-  transition: 300ms all;
-  animation: ${showComponent} 800ms;
+  top: 64px;
+  right: 64px;
 `;
 
 export const Toggler = styled.button<TogglerProps>`
-  background: var(--color-green);
-  color: #fcfcfc;
-
+  background: ${({ theme }) => theme.colors.green};
   width: 32px;
   height: 32px;
 
@@ -53,18 +43,15 @@ export const Toggler = styled.button<TogglerProps>`
   align-items: center;
   justify-content: center;
 
-  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25);
-
   position: absolute;
+  left: 0;
   top: 50%;
-  left: 0%;
-  transform: ${({ onActivate }) =>
-    !onActivate ? css`translate(-2%, -50%)` : css`translate(54%, -50%)`};
-
-  transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275) transform;
+  transform: ${({ onCheck }) =>
+    onCheck ? `translate(0, -50%)` : `translate(18px, -50%)`};
+  transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   svg {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
   }
 `;

@@ -30,7 +30,7 @@ const hideElement = keyframes`
 
 // Code Style
 export const Container = styled.div<ContainerProps>`
-  background-color: var(--color-background);
+  background-color: ${({ theme }) => theme.colors.background};
 
   width: 100%;
   height: 98vh;
@@ -89,7 +89,7 @@ export const Header = styled.header<HeaderProps>`
 
     transition: all 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
     &:hover {
-      color: var(--color-green);
+      color: ${({ theme }) => theme.colors.secondary};
       transform: translateY(8px);
     }
   }

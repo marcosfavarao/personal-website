@@ -17,17 +17,20 @@ export const GlobalStyle = createGlobalStyle`
   html {
     @media (max-width: 1080px) {
       font-size: 93.75%;
+      transition: all 300ms linear;
     };
 
-    @media (max-width: 720px) {
+    @media (max-width: 768px) {
       font-size: 87.5%;
+      transition: all 300ms linear;
     };
   };
 
   body {
-    background: var(--color-background);
-		color: var(--color-text);
+    background: ${({ theme }) => theme.colors.background};
+		color: ${({ theme }) => theme.colors.text};
     -webkit-font-smoothing: antialiased;
+    transition: all 800ms cubic-bezier(0.39, 0.575, 0.565, 1);
   };
 
 	body, input, textarea, button {
@@ -41,7 +44,7 @@ export const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
-    color: var(--color-text);
+    color: ${({ theme }) => theme.colors.text};
   };
 
   a {
