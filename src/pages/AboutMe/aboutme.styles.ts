@@ -36,4 +36,11 @@ export const Block = styled.div`
   p {
     margin-left: 22px;
   }
+  span {
+    text-decoration: underline;
+    transition: all 300ms;
+    &:hover {
+      color: var(--color-green);
+    }
+  }
 `;

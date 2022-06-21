@@ -30,7 +30,7 @@ const hideElement = keyframes`
 
 // Code Style
 export const Container = styled.div<ContainerProps>`
-  background-color: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => theme.colors.background};
 
   width: 100%;
   height: 98vh;
@@ -50,7 +50,8 @@ export const Container = styled.div<ContainerProps>`
 
   transform: ${({ showPageContent }) =>
     showPageContent ? `translateY(0vh)` : `translateY(100vh)`};
-  transition: all 800ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: transform 800ms cubic-bezier(0.39, 0.575, 0.565, 1),
+    background 500ms;
 
   ${({ showPageContent }) =>
     showPageContent

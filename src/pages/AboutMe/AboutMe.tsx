@@ -62,10 +62,26 @@ export const AboutMe = () => {
             <p>
               Em 2021 tive minha primeira oportunidade de trabalho como
               desenvolvedor web em uma multinacional, utilizando frameworks e
-              tecnologias como Reacts e NodeJS. Além de contribuir com projetos
-              internos da empresa, também desenvolvia interfaces para uma
-              corporativa de saúde no exterior, bem como farmácias/planos de
-              saúde em que a mesma licenciavae que utilizavam do nosso produto.
+              tecnologias como{' '}
+              <span>
+                <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+                  <b>React</b>
+                </a>
+              </span>{' '}
+              e{' '}
+              <span>
+                <a
+                  href="https://nodejs.org/en/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <b>NodeJS</b>
+                </a>
+              </span>
+              . Além de contribuir com projetos internos da empresa, também
+              desenvolvia interfaces para uma corporativa de saúde no exterior,
+              bem como farmácias/planos de saúde em que a mesma licenciavae que
+              utilizavam do nosso produto.
             </p>
           </Block>
 
