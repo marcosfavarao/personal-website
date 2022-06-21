@@ -1,16 +1,28 @@
+import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { darkTheme, lightTheme } from './common/styles/theme';
-import { NavigationProvider } from './hooks/useNavigation';
+import { darkTheme, lightTheme } from './common/styles/themeStyles';
 
+import { NavigationProvider } from './hooks';
 import { Home, AboutMe } from './pages';
 
 import { GlobalStyle } from './common/styles/globalStyles';
 
 export const App = () => {
+  const [theme, setTheme] = useState(lightTheme);
+
+  const toggleTheme = () => {
+    setTheme((currentTheme) =>
+      currentTheme.title === 'lightTheme' ? darkTheme : lightTheme,
+    );
+  };
+
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={theme}>
       <NavigationProvider>
-        <Home />
+        <Home
+          onChangeTheme={toggleTheme}
+          onCheckTheme={theme.title !== 'lightTheme'}
+        />
         <AboutMe />
         <GlobalStyle />
       </NavigationProvider>

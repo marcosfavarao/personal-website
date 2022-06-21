@@ -7,6 +7,11 @@ import { Switcher } from '../../components';
 import profileImg from '../../common/assets/images/profile-image.png';
 import { Container, Content, Profile, Navbar, Button } from './home.styles';
 
+interface HomeProps {
+  onCheckTheme: boolean;
+  onChangeTheme: () => void;
+}
+
 const NavbarLinks = () => {
   const {
     setToggleContactPage,
@@ -37,14 +42,14 @@ const NavbarLinks = () => {
   );
 };
 
-export const Home = () => {
+export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
   return (
     <Container>
       <Switcher
-        onChange={() => {
-          console.log('ok');
-        }}
-        onCheck
+        onCheck={onCheckTheme}
+        onChange={onChangeTheme}
+        checkedIcon={RiMoonClearFill}
+        uncheckedIcon={FaSun}
       />
       <Content>
         <Profile>

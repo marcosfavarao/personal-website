@@ -1,1 +1,2 @@
-export { useNavigation } from './useNavigation';
+export { useNavigation, NavigationProvider } from './useNavigation';
+export { useTheme, ThemeProvider } from './useTheme';

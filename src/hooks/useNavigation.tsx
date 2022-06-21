@@ -44,7 +44,9 @@ const DEFAULT_VALUE = {
 const NavigationContext = createContext<NavigationState>(DEFAULT_VALUE);
 
 export const NavigationProvider = ({ children }: NavigationProviderProps) => {
-  const [onAnyPageOpen, setOnAnyPageOpen] = useState<boolean>(false);
+  const [onAnyPageOpen, setOnAnyPageOpen] = useState<boolean>(
+    DEFAULT_VALUE.onAnyPageOpen,
+  );
 
   const [toggleContactPage, setToggleContactPage] = useState<boolean>(
     DEFAULT_VALUE.toggleContactPage,

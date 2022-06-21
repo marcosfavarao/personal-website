@@ -19,20 +19,23 @@ const showComponent = keyframes`
 
 // Code Style
 export const Container = styled.div`
+  background: ${({ theme }) => theme.colors.primary};
   width: 50px;
-  height: 20px;
-  background-color: ${({ theme }) => theme.colors.primary};
+  height: 18px;
 
-  border: 0;
   border-radius: 20px;
-
   position: fixed;
   top: 64px;
   right: 64px;
+
+  border: 0;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+
+  z-index: 100;
 `;
 
 export const Toggler = styled.button<TogglerProps>`
-  background: ${({ theme }) => theme.colors.green};
+  background: ${({ theme }) => theme.colors.secondary};
   width: 32px;
   height: 32px;
 
@@ -47,10 +50,11 @@ export const Toggler = styled.button<TogglerProps>`
   left: 0;
   top: 50%;
   transform: ${({ onCheck }) =>
-    onCheck ? `translate(0, -50%)` : `translate(18px, -50%)`};
-  transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    onCheck ? `translate(58%, -50%)` : `translate(-2%, -50%)`};
+  transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   svg {
+    color: ${({ theme }) => theme.colors.primary};
     width: 20px;
     height: 20px;
   }

@@ -6,7 +6,6 @@ export const lightTheme = {
     text: '#383838',
     primary: '#e9e9e9',
     secondary: '#169a67',
-    green: '#169a67',
   },
 };
 
@@ -18,6 +17,5 @@ export const darkTheme = {
     text: '#FCFCFC',
     primary: '#e9e9e9',
     secondary: '#169a67',
-    green: '#169a67',
   },
 };
