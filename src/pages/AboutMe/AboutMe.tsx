@@ -17,13 +17,15 @@ export const AboutMe = () => {
           <p>
             &apos;Hello World&apos;, meu nome é <b>Marcos Favarão</b>,
             desenvolvedor web apaixonado por tecnologia,{' '}
-            <a
-              href="https://open.spotify.com/user/g55nb1mqoasclcvzgmqmys7o6"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <b>música</b>
-            </a>{' '}
+            <span>
+              <a
+                href="https://open.spotify.com/user/g55nb1mqoasclcvzgmqmys7o6"
+                target="_blank"
+                rel="noreferrer"
+              >
+                música
+              </a>
+            </span>{' '}
             e viajens. Possuo 26 anos de idade e atualmente moro na grande
             Ribeirão Preto, São Paulo.
           </p>
@@ -66,8 +68,8 @@ export const AboutMe = () => {
               <span>
                 <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
                   <b>React</b>
-                </a>
-              </span>{' '}
+                </a>{' '}
+              </span>
               e{' '}
               <span>
                 <a

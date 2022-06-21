@@ -15,6 +15,7 @@ export const Header = styled.header`
   a {
     text-decoration: underline;
     transition: all 300ms;
+    font-weight: bold;
     &:hover {
       color: var(--color-green);
     }
