@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme } from './common/styles/themeStyles';
 
 import { NavigationProvider } from './hooks';
-import { Home, AboutMe, Contact, Projects, Experiences } from './pages';
+import { Home, AboutMe, Contact, Projects, Experiences, Skills } from './pages';
 
 import { GlobalStyle } from './common/styles/globalStyles';
 
@@ -27,6 +27,7 @@ export const App = () => {
         <Projects />
         <AboutMe />
         <Experiences />
+        <Skills />
         <GlobalStyle />
       </NavigationProvider>
     </ThemeProvider>

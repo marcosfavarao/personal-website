@@ -21,8 +21,17 @@ export const Experiences = () => {
       <Container>
         <Header>
           <p>
-            Meus conhecimentos e experiências profissionais em que pude
-            contribuir com o desenvolvimento e idéias inovadoras.
+            Minhas contribuições e{' '}
+            <span>
+              <a
+                href="https://resume.io/r/bkAGBcy1d"
+                target="_blank"
+                rel="noreferrer"
+              >
+                experiências profissionais
+              </a>
+            </span>{' '}
+            ao longo da minha trajetória como desenvolvedor.
           </p>
         </Header>
 
@@ -45,7 +54,7 @@ export const Experiences = () => {
             <Information>
               <h3>Massfar Realidade Virtual</h3>
               <p>AR/VR Developer - Web Mobile</p>
-              <p>Set 2019 - Jan 2021</p>
+              <p>Sep 2019 - Jan 2021</p>
             </Information>
           </BlockContent>
 
@@ -73,6 +82,16 @@ export const Experiences = () => {
                 <h3>CCAA Language School</h3>
                 <p>English in Master 1 Level</p>
                 <p>Jan 2012 - Dec 2018</p>
+              </Information>
+            </BlockContent>
+
+            <BlockContent>
+              <h1>Conferences</h1>
+
+              <Information>
+                <h3>Facebook ID8</h3>
+                <p />
+                <p>Oct - 2020</p>
               </Information>
             </BlockContent>
           </div>

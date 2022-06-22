@@ -19,7 +19,7 @@ export const Header = styled.header`
     transition: all 300ms;
     font-weight: bold;
     &:hover {
-      color: var(--color-green);
+      color: ${({ theme }) => theme.colors.secondary};
     }
   }
 `;

@@ -15,6 +15,15 @@ export const Header = styled.header`
   text-transform: none;
   font-size: 1.2rem;
   line-height: 2rem;
+
+  a {
+    text-decoration: underline;
+    transition: all 300ms;
+    font-weight: bold;
+    &:hover {
+      color: ${({ theme }) => theme.colors.secondary};
+    }
+  }
 `;
 
 export const Content = styled.section`
@@ -27,19 +36,21 @@ export const Content = styled.section`
   justify-content: space-around;
 `;
 
-export const BlockContent = styled.div`
+export const BlockContent = styled.section`
   padding: 0 1rem;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
 
+  margin-bottom: 4rem;
+
   h1 {
     text-align: left;
     text-transform: none;
     font-size: 2rem;
     line-height: 2rem;
-    margin: 2rem 0;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -49,7 +60,7 @@ export const Information = styled.div`
   line-height: 2rem;
 
   h3 {
-    margin: 0.5rem 0;
+    margin: 0.25rem 0;
   }
 
   p {
