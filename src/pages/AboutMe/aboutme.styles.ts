@@ -13,7 +13,6 @@ export const Header = styled.header`
   text-transform: none;
   font-size: 1.2rem;
   line-height: 2rem;
-  user-select: none;
 
   a {
     text-decoration: underline;
@@ -31,7 +30,7 @@ export const Content = styled.section`
 
 export const Block = styled.div`
   width: 100%;
-  user-select: none;
+
   text-transform: none;
   font-size: 1rem;
   line-height: 2rem;

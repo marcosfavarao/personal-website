@@ -14,7 +14,6 @@ export const Header = styled.header`
   text-transform: none;
   font-size: 1.2rem;
   line-height: 2rem;
-  user-select: none;
 `;
 
 export const Form = styled.form``;

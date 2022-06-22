@@ -76,7 +76,6 @@ export const Profile = styled.section`
   flex-direction: column;
 
   text-align: center;
-  user-select: none;
 
   -webkit-animation: ${profileAnimation} 750ms
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -125,8 +124,6 @@ export const Navbar = styled.footer`
   align-items: center;
   justify-content: center;
   flex-direction: row;
-
-  user-select: none;
 
   -webkit-animation: ${navbarAnimation} 0.75s
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;

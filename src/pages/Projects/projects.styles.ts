@@ -14,7 +14,6 @@ export const Header = styled.header`
   text-transform: none;
   font-size: 1.2rem;
   line-height: 2rem;
-  user-select: none;
 `;
 
 export const Content = styled.section`
@@ -64,7 +63,8 @@ export const Card = styled.a`
     height: 315px;
     border: 0;
     object-fit: cover;
-    filter: blur(2px);
+    transition: all 500ms;
+    filter: blur(1px);
   }
 
   &:hover {
@@ -80,7 +80,6 @@ export const Card = styled.a`
     }
 
     img {
-      transition: all 500ms;
       filter: blur(3px) grayscale(40%);
     }
   }
@@ -98,7 +97,6 @@ export const CardTitle = styled.footer`
   font-size: 1rem;
   font-weight: 600;
   line-height: 2rem;
-  user-select: none;
 
   position: absolute;
   bottom: 0;
@@ -106,4 +104,5 @@ export const CardTitle = styled.footer`
   right: 0;
 
   z-index: 1;
+  transition: all 500ms;
 `;

@@ -82,7 +82,7 @@ export const AboutMe = () => {
               </span>
               . Além de contribuir com projetos internos da empresa, também
               desenvolvia interfaces para uma corporativa de saúde no exterior,
-              bem como farmácias/planos de saúde em que a mesma licenciavae que
+              bem como farmácias/planos de saúde em que a mesma licenciava e que
               utilizavam do nosso produto.
             </p>
           </Block>

@@ -73,7 +73,6 @@ export const Content = styled.main`
 export const Header = styled.header<HeaderProps>`
   display: grid;
   place-items: center;
-  user-select: none;
 
   svg {
     /* => Another way for centering an SVG element.
