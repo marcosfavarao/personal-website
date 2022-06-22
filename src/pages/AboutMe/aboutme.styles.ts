@@ -6,6 +6,9 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.header`
+  width: 100%;
+  margin: 0 auto;
+
   text-align: center;
   text-transform: none;
   font-size: 1.2rem;

@@ -151,14 +151,14 @@ export const Button = styled.button`
   animation: ${buttonOutFocusAnimation} 0.5s
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
-  transition: color 0.25s;
+  transition: color 250ms;
   &:hover,
   &:focus {
     color: var(--color-green);
 
-    -webkit-animation: ${buttonInFocusAnimation} 0.5s
+    -webkit-animation: ${buttonInFocusAnimation} 500ms
       cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: ${buttonInFocusAnimation} 0.5s
+    animation: ${buttonInFocusAnimation} 500ms
       cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 `;
