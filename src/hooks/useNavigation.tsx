@@ -25,6 +25,7 @@ interface NavigationState {
   setToggleAboutMePage: Dispatch<SetStateAction<boolean>>;
   setToggleExperiencesPage: Dispatch<SetStateAction<boolean>>;
   setToggleSkillsPage: Dispatch<SetStateAction<boolean>>;
+  closePages: () => void;
 }
 
 const DEFAULT_VALUE = {
@@ -39,6 +40,7 @@ const DEFAULT_VALUE = {
   setToggleAboutMePage: () => ({}),
   setToggleExperiencesPage: () => ({}),
   setToggleSkillsPage: () => ({}),
+  closePages: () => ({}),
 };
 
 const NavigationContext = createContext<NavigationState>(DEFAULT_VALUE);
@@ -64,6 +66,14 @@ export const NavigationProvider = ({ children }: NavigationProviderProps) => {
     DEFAULT_VALUE.toggleSkillsPage,
   );
 
+  const closePages = () => {
+    setToggleContactPage(false);
+    setToggleProjectsPage(false);
+    setToggleAboutMePage(false);
+    setToggleExperiencesPage(false);
+    setToggleSkillsPage(false);
+  };
+
   useEffect(() => {
     setOnAnyPageOpen((callback) => !callback);
   }, [
@@ -87,6 +97,7 @@ export const NavigationProvider = ({ children }: NavigationProviderProps) => {
       setToggleAboutMePage,
       setToggleExperiencesPage,
       setToggleSkillsPage,
+      closePages,
     }),
     [
       onAnyPageOpen,

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { FaSun } from 'react-icons/fa';
 import { RiMoonClearFill } from 'react-icons/ri';
 
@@ -5,7 +6,17 @@ import { useNavigation } from '../../hooks';
 import { Switcher } from '../../components';
 
 import profileImg from '../../common/assets/images/profile-image.png';
-import { Container, Content, Profile, Navbar, Button } from './home.styles';
+import {
+  Container,
+  Content,
+  Profile,
+  Navbar,
+  Button,
+  MobileMenu,
+  MobileNavbar,
+  MobileMenuIcon,
+  MobileMenuArrowIcon,
+} from './home.styles';
 
 interface HomeProps {
   onCheckTheme: boolean;
@@ -43,14 +54,27 @@ const NavbarLinks = () => {
 };
 
 export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
+  const {
+    setToggleContactPage,
+    setToggleProjectsPage,
+    setToggleAboutMePage,
+    setToggleExperiencesPage,
+    setToggleSkillsPage,
+    closePages,
+  } = useNavigation();
+  const [toggleMobileMenu, setToggleMobileMenu] = useState<boolean>(false);
+
   return (
     <Container>
+      <MobileMenuIcon onClick={() => setToggleMobileMenu(true)} />
+
       <Switcher
         onCheck={onCheckTheme}
         onChange={onChangeTheme}
         checkedIcon={RiMoonClearFill}
         uncheckedIcon={FaSun}
       />
+
       <Content>
         <Profile>
           <img src={profileImg} alt="profile" />
@@ -63,6 +87,76 @@ export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
           <NavbarLinks />
         </Navbar>
       </Content>
+
+      <MobileMenu toggleMobileMenu={toggleMobileMenu}>
+        <MobileNavbar>
+          <button
+            type="button"
+            onClick={() => {
+              setToggleMobileMenu(false);
+              closePages();
+            }}
+          >
+            Home
+          </button>
+
+          <button
+            type="button"
+            onClick={() => {
+              closePages();
+              setToggleMobileMenu(false);
+              setToggleAboutMePage(true);
+            }}
+          >
+            About Me
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              closePages();
+              setToggleMobileMenu(false);
+              setToggleProjectsPage(true);
+            }}
+          >
+            Projects
+          </button>
+
+          <button
+            type="button"
+            onClick={() => {
+              closePages();
+              setToggleMobileMenu(false);
+              setToggleExperiencesPage(true);
+            }}
+          >
+            Experiences
+          </button>
+
+          <button
+            type="button"
+            onClick={() => {
+              closePages();
+              setToggleMobileMenu(false);
+              setToggleSkillsPage(true);
+            }}
+          >
+            Skills
+          </button>
+
+          <button
+            type="button"
+            onClick={() => {
+              closePages();
+              setToggleMobileMenu(false);
+              setToggleContactPage(true);
+            }}
+          >
+            Contact
+          </button>
+        </MobileNavbar>
+
+        <MobileMenuArrowIcon onClick={() => setToggleMobileMenu(false)} />
+      </MobileMenu>
     </Container>
   );
 };

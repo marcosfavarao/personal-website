@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 // Interfaces and Prop Types
 interface TogglerProps {
@@ -32,6 +32,14 @@ export const Container = styled.div`
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 
   z-index: 100;
+
+  transition: all 800ms;
+  animation: ${showComponent} 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+  @media (max-width: 768px) {
+    top: 32px;
+    right: 16px;
+  }
 `;
 
 export const Toggler = styled.button<TogglerProps>`
