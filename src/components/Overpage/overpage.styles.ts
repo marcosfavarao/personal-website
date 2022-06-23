@@ -53,6 +53,10 @@ export const Container = styled.div<ContainerProps>`
   transition: transform 800ms cubic-bezier(0.39, 0.575, 0.565, 1),
     background 500ms;
 
+  opacity: ${({ showPageContent }) => (showPageContent ? `1` : `0`)};
+  pointer-events: ${({ showPageContent }) =>
+    showPageContent ? `all` : `none`};
+
   ${({ showPageContent }) =>
     showPageContent
       ? css`

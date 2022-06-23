@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  padding: 0 2rem;
+  padding: 0 1rem;
   overflow: auto;
 `;
 
@@ -14,15 +14,23 @@ export const Header = styled.header`
   text-transform: none;
   font-size: 1.2rem;
   line-height: 2rem;
+
+  @media (max-width: 915px) {
+    font-size: 1rem;
+  }
 `;
 
 export const Form = styled.form``;
 
-export const Content = styled.section`
+export const SocialBar = styled.section`
   width: 100%;
-  text-align: center;
   margin: 0 auto;
-  margin-top: 8rem;
+  text-align: center;
+  margin-top: 4rem;
+
+  @media (max-width: 915px) {
+    margin-top: 3.6rem;
+  }
 `;
 
 export const Social = styled.div`

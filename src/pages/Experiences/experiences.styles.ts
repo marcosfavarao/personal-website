@@ -3,13 +3,13 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
+  padding: 1rem;
   overflow: auto;
 `;
 
 export const Header = styled.header`
   width: 100%;
   margin: 0 auto;
-  padding: 1rem;
 
   text-align: center;
   text-transform: none;
@@ -24,20 +24,37 @@ export const Header = styled.header`
       color: ${({ theme }) => theme.colors.secondary};
     }
   }
+
+  @media (max-width: 915px) {
+    font-size: 1rem;
+  }
 `;
 
 export const Content = styled.section`
   width: 100%;
   margin: 0 auto;
-  padding: 1rem;
+  margin-top: 4rem;
 
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  flex-direction: row;
+
+  @media (max-width: 915px) {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    div {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
 `;
 
 export const BlockContent = styled.section`
-  padding: 0 1rem;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -51,6 +68,13 @@ export const BlockContent = styled.section`
     font-size: 2rem;
     line-height: 2rem;
     margin-bottom: 1rem;
+  }
+
+  @media (max-width: 915px) {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 `;
 

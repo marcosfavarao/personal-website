@@ -10,7 +10,7 @@ import { IoIosMail } from 'react-icons/io';
 import { useNavigation } from '../../hooks';
 import { Overpage } from '../../components';
 
-import { Container, Header, Form, Content, Social } from './contact.styles';
+import { Container, Header, Form, SocialBar, Social } from './contact.styles';
 
 export const Contact = () => {
   const { toggleContactPage, setToggleContactPage } = useNavigation();
@@ -33,7 +33,7 @@ export const Contact = () => {
           <button type="submit">Submit</button>
         </Form> */}
 
-        <Content>
+        <SocialBar>
           <p>Follow me:</p>
           <Social>
             <a
@@ -76,7 +76,7 @@ export const Contact = () => {
               <IoIosMail />
             </a>
           </Social>
-        </Content>
+        </SocialBar>
       </Container>
     </Overpage>
   );

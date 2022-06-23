@@ -4,6 +4,7 @@ import { transparentize } from 'polished';
 export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
+  padding: 0 1rem;
 `;
 
 export const Header = styled.header`
@@ -14,6 +15,10 @@ export const Header = styled.header`
   text-transform: none;
   font-size: 1.2rem;
   line-height: 2rem;
+
+  @media (max-width: 915px) {
+    font-size: 1rem;
+  }
 `;
 
 export const Content = styled.section`
@@ -81,6 +86,17 @@ export const Card = styled.a`
 
     img {
       filter: blur(3px) grayscale(40%);
+    }
+  }
+
+  @media (max-width: 915px) {
+    border: 1px solid
+      ${({ theme }) => transparentize(0.8, theme.colors.secondary)};
+    box-shadow: 0 0 6px 1px
+      ${({ theme }) => transparentize(0.8, theme.colors.secondary)};
+
+    svg {
+      opacity: 1;
     }
   }
 `;

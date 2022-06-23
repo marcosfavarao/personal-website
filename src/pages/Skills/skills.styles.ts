@@ -3,7 +3,9 @@ import { transparentize } from 'polished';
 
 export const Container = styled.div`
   width: 100%;
+  /* padding: 1rem; */
   margin: 0 auto;
+  overflow: auto;
 `;
 
 export const Header = styled.header`
@@ -14,7 +16,10 @@ export const Header = styled.header`
   text-transform: none;
   font-size: 1.2rem;
   line-height: 2rem;
-  padding: 2rem;
+
+  @media (max-width: 915px) {
+    font-size: 1rem;
+  }
 `;
 
 export const Content = styled.section`
@@ -31,6 +36,10 @@ export const Content = styled.section`
 
   align-self: center;
   justify-items: center;
+
+  @media (max-width: 915px) {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
 `;
 
 export const Sticker = styled.div`
@@ -59,5 +68,20 @@ export const Sticker = styled.div`
   &:hover {
     border: 1px solid
       ${({ theme }) => transparentize(0.8, theme.colors.secondary)};
+  }
+
+  @media (max-width: 915px) {
+    width: 150px;
+    height: 80px;
+    font-size: 0.8rem;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+
+    span {
+      margin-left: 0.8rem;
+    }
   }
 `;

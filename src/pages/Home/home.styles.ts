@@ -63,16 +63,16 @@ const buttonOutFocusAnimation = keyframes`
 
 const mobileArrowAnimation = keyframes`
   0% {
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
+    -webkit-transform: translate3d(-50%, -10%, 0);
+    transform: translate3d(-50%, -10%, 0);
   }
   50% {
-    -webkit-transform: translate3d(-50%, -80%, 0);
-    transform: translate3d(-50%, -80%, 0);
+    -webkit-transform: translate3d(-50%, -25%, 0);
+    transform: translate3d(-50%, -20%, 0);
   }
   100% {
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
+    -webkit-transform: translate3d(-50%, -10%, 0);
+    transform: translate3d(-50%, -10%, 0);
   }
 `;
 
@@ -85,7 +85,7 @@ export const Content = styled.div`
   width: 100%;
   margin-top: 5rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 915px) {
     margin: 0;
 
     position: absolute;
@@ -141,7 +141,7 @@ export const Profile = styled.section`
     text-transform: capitalize;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 915px) {
     img {
       width: 200px;
     }
@@ -182,7 +182,7 @@ export const Navbar = styled.nav`
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: ${navbarAnimation} 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
-  @media (max-width: 768px) {
+  @media (max-width: 915px) {
     opacity: 0;
     display: none;
     pointer-events: none;
@@ -227,21 +227,19 @@ export const MobileMenu = styled.div<MobileMenuProps>`
   position: absolute;
   inset: 0;
 
-  box-shadow: 0 0 8px 1px
-    ${({ theme }) => transparentize(0.8, theme.colors.secondary)} inset;
-
-  /* opacity: 0; */
-  opacity: ${({ toggleMobileMenu }) => (toggleMobileMenu ? `1` : `0`)};
   display: none;
   pointer-events: none;
   z-index: 100;
+
+  opacity: ${({ toggleMobileMenu }) => (toggleMobileMenu ? `1` : `0`)};
+  box-shadow: 0 0 8px 1px
+    ${({ theme }) => transparentize(0.8, theme.colors.secondary)} inset;
 
   transform: ${({ toggleMobileMenu }) =>
     toggleMobileMenu ? `translateY(0%)` : `translateY(-100%)`};
   transition: all 800ms ease-in-out;
 
-  @media (max-width: 768px) {
-    /* opacity: 1; */
+  @media (max-width: 915px) {
     display: block;
     pointer-events: all;
   }
@@ -273,7 +271,7 @@ export const MobileNavbarButton = styled.button`
 `;
 
 export const MobileMenuHomeIcon = styled(IoMdMenu)`
-  background: ${({ theme }) => theme.colors.background};
+  /* background: ${({ theme }) => theme.colors.background}; */
   width: 32px;
   height: 32px;
 
@@ -287,18 +285,18 @@ export const MobileMenuHomeIcon = styled(IoMdMenu)`
 
   transition: all 800ms;
 
-  @media (max-width: 768px) {
+  @media (max-width: 915px) {
     opacity: 1;
     pointer-events: all;
   }
 `;
 
 export const MobileMenuArrowIcon = styled(IoIosArrowUp)`
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   left: 50%;
   bottom: 0%;
-  transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -10%, 0);
   animation: ${mobileArrowAnimation} 4000ms infinite;
 `;

@@ -7,6 +7,7 @@ import {
   useEffect,
   useContext,
   useMemo,
+  useCallback,
 } from 'react';
 
 interface NavigationProviderProps {
@@ -49,7 +50,6 @@ export const NavigationProvider = ({ children }: NavigationProviderProps) => {
   const [onAnyPageOpen, setOnAnyPageOpen] = useState<boolean>(
     DEFAULT_VALUE.onAnyPageOpen,
   );
-
   const [toggleContactPage, setToggleContactPage] = useState<boolean>(
     DEFAULT_VALUE.toggleContactPage,
   );

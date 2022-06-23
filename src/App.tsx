@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme } from './common/styles/themeStyles';
 
@@ -15,6 +15,12 @@ export const App = () => {
       currentTheme.title === 'lightTheme' ? darkTheme : lightTheme,
     );
   };
+
+  const defineTheme = useCallback(() => {
+    setTheme((currentTheme) =>
+      currentTheme.title === 'lightTheme' ? darkTheme : lightTheme,
+    );
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
