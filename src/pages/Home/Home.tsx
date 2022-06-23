@@ -11,10 +11,11 @@ import {
   Content,
   Profile,
   Navbar,
-  Button,
+  NavbarButton,
   MobileMenu,
   MobileNavbar,
-  MobileMenuIcon,
+  MobileNavbarButton,
+  MobileMenuHomeIcon,
   MobileMenuArrowIcon,
 } from './home.styles';
 
@@ -22,36 +23,6 @@ interface HomeProps {
   onCheckTheme: boolean;
   onChangeTheme: () => void;
 }
-
-const NavbarLinks = () => {
-  const {
-    setToggleContactPage,
-    setToggleProjectsPage,
-    setToggleAboutMePage,
-    setToggleExperiencesPage,
-    setToggleSkillsPage,
-  } = useNavigation();
-
-  return (
-    <>
-      <Button type="button" onClick={() => setToggleContactPage(true)}>
-        Contact
-      </Button>
-      <Button type="button" onClick={() => setToggleProjectsPage(true)}>
-        Projects
-      </Button>
-      <Button type="button" onClick={() => setToggleAboutMePage(true)}>
-        About Me
-      </Button>
-      <Button type="button" onClick={() => setToggleExperiencesPage(true)}>
-        Experiences
-      </Button>
-      <Button type="button" onClick={() => setToggleSkillsPage(true)}>
-        Skills
-      </Button>
-    </>
-  );
-};
 
 export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
   const {
@@ -66,7 +37,7 @@ export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
 
   return (
     <Container>
-      <MobileMenuIcon onClick={() => setToggleMobileMenu(true)} />
+      <MobileMenuHomeIcon onClick={() => setToggleMobileMenu(true)} />
 
       <Switcher
         onCheck={onCheckTheme}
@@ -84,13 +55,43 @@ export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
         </Profile>
 
         <Navbar>
-          <NavbarLinks />
+          <NavbarButton
+            type="button"
+            onClick={() => setToggleContactPage(true)}
+          >
+            Contact
+          </NavbarButton>
+
+          <NavbarButton
+            type="button"
+            onClick={() => setToggleProjectsPage(true)}
+          >
+            Projects
+          </NavbarButton>
+
+          <NavbarButton
+            type="button"
+            onClick={() => setToggleAboutMePage(true)}
+          >
+            About Me
+          </NavbarButton>
+
+          <NavbarButton
+            type="button"
+            onClick={() => setToggleExperiencesPage(true)}
+          >
+            Experiences
+          </NavbarButton>
+
+          <NavbarButton type="button" onClick={() => setToggleSkillsPage(true)}>
+            Skills
+          </NavbarButton>
         </Navbar>
       </Content>
 
       <MobileMenu toggleMobileMenu={toggleMobileMenu}>
         <MobileNavbar>
-          <button
+          <MobileNavbarButton
             type="button"
             onClick={() => {
               setToggleMobileMenu(false);
@@ -98,9 +99,9 @@ export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
             }}
           >
             Home
-          </button>
+          </MobileNavbarButton>
 
-          <button
+          <MobileNavbarButton
             type="button"
             onClick={() => {
               closePages();
@@ -109,8 +110,9 @@ export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
             }}
           >
             About Me
-          </button>
-          <button
+          </MobileNavbarButton>
+
+          <MobileNavbarButton
             type="button"
             onClick={() => {
               closePages();
@@ -119,9 +121,9 @@ export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
             }}
           >
             Projects
-          </button>
+          </MobileNavbarButton>
 
-          <button
+          <MobileNavbarButton
             type="button"
             onClick={() => {
               closePages();
@@ -130,9 +132,9 @@ export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
             }}
           >
             Experiences
-          </button>
+          </MobileNavbarButton>
 
-          <button
+          <MobileNavbarButton
             type="button"
             onClick={() => {
               closePages();
@@ -141,9 +143,9 @@ export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
             }}
           >
             Skills
-          </button>
+          </MobileNavbarButton>
 
-          <button
+          <MobileNavbarButton
             type="button"
             onClick={() => {
               closePages();
@@ -152,7 +154,7 @@ export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
             }}
           >
             Contact
-          </button>
+          </MobileNavbarButton>
         </MobileNavbar>
 
         <MobileMenuArrowIcon onClick={() => setToggleMobileMenu(false)} />

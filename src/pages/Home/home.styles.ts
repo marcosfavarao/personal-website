@@ -189,7 +189,7 @@ export const Navbar = styled.nav`
   }
 `;
 
-export const Button = styled.button`
+export const NavbarButton = styled.button`
   background: transparent;
 
   padding: 1rem;
@@ -255,24 +255,24 @@ export const MobileNavbar = styled.nav`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-  button {
-    background: transparent;
-
-    width: 80px;
-    height: 40px;
-    margin: 0.25rem 0;
-
-    border: 0;
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 16px;
-    text-align: center;
-    text-transform: capitalize;
-  }
 `;
 
-export const MobileMenuIcon = styled(IoMdMenu)`
+export const MobileNavbarButton = styled.button`
+  background: transparent;
+
+  width: 80px;
+  height: 40px;
+  margin: 0.25rem 0;
+
+  border: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: center;
+  text-transform: capitalize;
+`;
+
+export const MobileMenuHomeIcon = styled(IoMdMenu)`
   background: ${({ theme }) => theme.colors.background};
   width: 32px;
   height: 32px;
