@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme } from './common/styles/themeStyles';
 
 import { NavigationProvider } from './hooks';
-import { Home, AboutMe, Contact, Projects, Experiences, Skills } from './pages';
+import { Home, About, Contact, Projects, Experiences, Skills } from './pages';
 
 import { GlobalStyle } from './common/styles/globalStyles';
 
@@ -31,7 +31,7 @@ export const App = () => {
         />
         <Contact />
         <Projects />
-        <AboutMe />
+        <About />
         <Experiences />
         <Skills />
         <GlobalStyle />

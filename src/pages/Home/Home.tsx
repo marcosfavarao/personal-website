@@ -28,7 +28,7 @@ export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
   const {
     setToggleContactPage,
     setToggleProjectsPage,
-    setToggleAboutMePage,
+    setToggleAboutPage,
     setToggleExperiencesPage,
     setToggleSkillsPage,
     closePages,
@@ -51,7 +51,8 @@ export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
           <img src={profileImg} alt="profile" />
 
           <h1>Marcos A. L. Favarão</h1>
-          <h2>Web Front-End Developer</h2>
+          <h2>Software Engineer</h2>
+          {/* <h2>Web Front-End Developer</h2> */}
         </Profile>
 
         <Navbar>
@@ -69,11 +70,8 @@ export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
             Projects
           </NavbarButton>
 
-          <NavbarButton
-            type="button"
-            onClick={() => setToggleAboutMePage(true)}
-          >
-            About Me
+          <NavbarButton type="button" onClick={() => setToggleAboutPage(true)}>
+            About
           </NavbarButton>
 
           <NavbarButton
@@ -106,7 +104,7 @@ export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
             onClick={() => {
               closePages();
               setToggleMobileMenu(false);
-              setToggleAboutMePage(true);
+              setToggleAboutPage(true);
             }}
           >
             About Me

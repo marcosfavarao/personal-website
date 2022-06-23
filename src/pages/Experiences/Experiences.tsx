@@ -21,17 +21,17 @@ export const Experiences = () => {
       <Container>
         <Header>
           <p>
-            Minhas contribuições e{' '}
+            My contributions and{' '}
             <span>
               <a
                 href="https://resume.io/r/bkAGBcy1d"
                 target="_blank"
                 rel="noreferrer"
               >
-                experiências profissionais
+                professional experiences
               </a>
             </span>{' '}
-            ao longo da minha trajetória como desenvolvedor.
+            throughout my trajectory as a developer.
           </p>
         </Header>
 
@@ -52,7 +52,7 @@ export const Experiences = () => {
             </Information>
 
             <Information>
-              <h3>Massfar Realidade Virtual</h3>
+              <h3>Massfar Virtual Reality</h3>
               <p>AR/VR Developer - Web Mobile</p>
               <p>Sep 2019 - Jan 2021</p>
             </Information>
@@ -75,7 +75,7 @@ export const Experiences = () => {
               <Information>
                 <h3>Rocketseat</h3>
                 <p>Ignite Bootcamp</p>
-                <p>Jul 2022 - Ago 2022</p>
+                <p>In progress...</p>
               </Information>
 
               <Information>

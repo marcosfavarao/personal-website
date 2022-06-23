@@ -20,8 +20,6 @@ export const Header = styled.header`
   }
 `;
 
-export const Form = styled.form``;
-
 export const SocialBar = styled.section`
   width: 100%;
   margin: 0 auto;

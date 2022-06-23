@@ -35,8 +35,8 @@ export const Skills = () => {
       <Container>
         <Header>
           <p>
-            Durante minha trajetória, colaborei com diversos projetos utilizando
-            das seguintes tecnologias.
+            During my career, I collaborated with several projects using the
+            following technologies showed below.
           </p>
         </Header>
 
@@ -145,3 +145,5 @@ export const Skills = () => {
     </Overpage>
   );
 };
+
+// Skills

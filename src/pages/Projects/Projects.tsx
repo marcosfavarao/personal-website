@@ -19,8 +19,8 @@ export const Projects = () => {
       <Container>
         <Header>
           <p>
-            Aqui apresento alguns dos meus projetos em que me dediquei a
-            desenvolver e que foram referências para estudos.
+            Just a list of my personal projects that I dedicated myself to
+            develop and also, as references for studies.
           </p>
         </Header>
 
@@ -33,7 +33,7 @@ export const Projects = () => {
             <img src={project1Img} alt="Project 01" />
             <FaGithub />
 
-            <CardTitle>Portifólio</CardTitle>
+            <CardTitle>Portfolio</CardTitle>
           </Card>
 
           <Card

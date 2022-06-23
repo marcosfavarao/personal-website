@@ -3,14 +3,13 @@ import {
   FaLinkedin,
   FaTwitter,
   FaStackOverflow,
-  FaWhatsapp,
 } from 'react-icons/fa';
 import { IoIosMail } from 'react-icons/io';
 
 import { useNavigation } from '../../hooks';
 import { Overpage } from '../../components';
 
-import { Container, Header, Form, SocialBar, Social } from './contact.styles';
+import { Container, Header, SocialBar, Social } from './contact.styles';
 
 export const Contact = () => {
   const { toggleContactPage, setToggleContactPage } = useNavigation();
@@ -23,15 +22,8 @@ export const Contact = () => {
     >
       <Container>
         <Header>
-          <p>Você pode me contactar nas seguintes redes sociais abaixo.</p>
+          <p>You can contact me on the following social networks below.</p>
         </Header>
-
-        {/* <Form>
-          <input type="text" placeholder="First Name" />
-          <input type="text" placeholder="Last Name" />
-          <input type="text" placeholder="Message..." />
-          <button type="submit">Submit</button>
-        </Form> */}
 
         <SocialBar>
           <p>Follow me:</p>

@@ -7,7 +7,6 @@ import {
   useEffect,
   useContext,
   useMemo,
-  useCallback,
 } from 'react';
 
 interface NavigationProviderProps {
@@ -18,12 +17,12 @@ interface NavigationState {
   onAnyPageOpen: boolean;
   toggleContactPage: boolean;
   toggleProjectsPage: boolean;
-  toggleAboutMePage: boolean;
+  toggleAboutPage: boolean;
   toggleExperiencesPage: boolean;
   toggleSkillsPage: boolean;
   setToggleContactPage: Dispatch<SetStateAction<boolean>>;
   setToggleProjectsPage: Dispatch<SetStateAction<boolean>>;
-  setToggleAboutMePage: Dispatch<SetStateAction<boolean>>;
+  setToggleAboutPage: Dispatch<SetStateAction<boolean>>;
   setToggleExperiencesPage: Dispatch<SetStateAction<boolean>>;
   setToggleSkillsPage: Dispatch<SetStateAction<boolean>>;
   closePages: () => void;
@@ -33,12 +32,12 @@ const DEFAULT_VALUE = {
   onAnyPageOpen: false,
   toggleContactPage: false,
   toggleProjectsPage: false,
-  toggleAboutMePage: false,
+  toggleAboutPage: false,
   toggleExperiencesPage: false,
   toggleSkillsPage: false,
   setToggleContactPage: () => ({}),
   setToggleProjectsPage: () => ({}),
-  setToggleAboutMePage: () => ({}),
+  setToggleAboutPage: () => ({}),
   setToggleExperiencesPage: () => ({}),
   setToggleSkillsPage: () => ({}),
   closePages: () => ({}),
@@ -56,8 +55,8 @@ export const NavigationProvider = ({ children }: NavigationProviderProps) => {
   const [toggleProjectsPage, setToggleProjectsPage] = useState<boolean>(
     DEFAULT_VALUE.toggleProjectsPage,
   );
-  const [toggleAboutMePage, setToggleAboutMePage] = useState<boolean>(
-    DEFAULT_VALUE.toggleAboutMePage,
+  const [toggleAboutPage, setToggleAboutPage] = useState<boolean>(
+    DEFAULT_VALUE.toggleAboutPage,
   );
   const [toggleExperiencesPage, setToggleExperiencesPage] = useState<boolean>(
     DEFAULT_VALUE.toggleExperiencesPage,
@@ -69,7 +68,7 @@ export const NavigationProvider = ({ children }: NavigationProviderProps) => {
   const closePages = () => {
     setToggleContactPage(false);
     setToggleProjectsPage(false);
-    setToggleAboutMePage(false);
+    setToggleAboutPage(false);
     setToggleExperiencesPage(false);
     setToggleSkillsPage(false);
   };
@@ -79,7 +78,7 @@ export const NavigationProvider = ({ children }: NavigationProviderProps) => {
   }, [
     toggleContactPage,
     toggleProjectsPage,
-    toggleAboutMePage,
+    toggleAboutPage,
     toggleExperiencesPage,
     toggleSkillsPage,
   ]);
@@ -89,19 +88,19 @@ export const NavigationProvider = ({ children }: NavigationProviderProps) => {
       onAnyPageOpen,
       toggleContactPage,
       toggleProjectsPage,
-      toggleAboutMePage,
+      toggleAboutPage,
       toggleExperiencesPage,
       toggleSkillsPage,
       setToggleContactPage,
       setToggleProjectsPage,
-      setToggleAboutMePage,
+      setToggleAboutPage,
       setToggleExperiencesPage,
       setToggleSkillsPage,
       closePages,
     }),
     [
       onAnyPageOpen,
-      toggleAboutMePage,
+      toggleAboutPage,
       toggleContactPage,
       toggleExperiencesPage,
       toggleProjectsPage,
