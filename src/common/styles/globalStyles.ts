@@ -1,12 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-  :root {
-	  --color-background: #FCFCFC;
-	  --color-text: #383838;
-    --color-green: #169a67;
-  };
-
   * {
     margin: 0;
     padding: 0;
@@ -30,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.colors.background};
 		color: ${({ theme }) => theme.colors.text};
     -webkit-font-smoothing: antialiased;
-    transition: all 500ms;
+    transition: all 800ms;
   };
 
 	body, input, textarea, button {

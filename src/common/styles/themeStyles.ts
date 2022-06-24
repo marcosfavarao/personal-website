@@ -7,6 +7,12 @@ export const lightTheme = {
     primary: '#ECECEC',
     secondary: '#169a67',
   },
+
+  transitions: {
+    fast: '300ms',
+    medium: '500ms',
+    slow: '800ms',
+  },
 };
 
 export const darkTheme = {
@@ -17,5 +23,11 @@ export const darkTheme = {
     text: '#FCFCFC',
     primary: '#e9e9e9',
     secondary: '#169a67',
+  },
+
+  transitions: {
+    fast: '300ms',
+    medium: '500ms',
+    slow: '800ms',
   },
 };

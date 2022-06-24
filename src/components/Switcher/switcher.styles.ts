@@ -34,8 +34,9 @@ export const Container = styled.div`
 
   z-index: 100;
 
-  transition: all 800ms;
-  animation: ${showComponent} 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  /* transition: all 800ms; */
+  animation: ${showComponent} ${({ theme }) => theme.transitions.slow}
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   @media (max-width: 768px) {
     top: 32px;
@@ -60,7 +61,8 @@ export const Toggler = styled.button<TogglerProps>`
   top: 50%;
   transform: ${({ onCheck }) =>
     onCheck ? `translate(58%, -50%)` : `translate(-2%, -50%)`};
-  transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all ${({ theme }) => theme.transitions.fast}
+    cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   svg {
     color: ${({ theme }) => lighten(0.08, theme.colors.primary)};

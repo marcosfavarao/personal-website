@@ -53,7 +53,7 @@ export const Card = styled.a`
         ? transparentize(0.8, theme.colors.primary)
         : theme.colors.primary};
 
-  transition: all 300ms;
+  transition: all ${({ theme }) => theme.transitions.fast};
 
   svg {
     color: ${({ theme }) => transparentize(0.4, theme.colors.secondary)};
@@ -66,7 +66,7 @@ export const Card = styled.a`
     transform: translate(-50%, -50%) scale(1.05);
 
     opacity: 0;
-    transition: all 500ms;
+    transition: all ${({ theme }) => theme.transitions.medium};
   }
 
   img {
@@ -74,7 +74,7 @@ export const Card = styled.a`
     height: 315px;
     border: 0;
     object-fit: cover;
-    transition: all 500ms;
+    transition: all ${({ theme }) => theme.transitions.medium};
     filter: blur(1px);
   }
 
@@ -126,5 +126,5 @@ export const CardTitle = styled.footer`
   right: 0;
 
   z-index: 1;
-  transition: all 500ms;
+  transition: background ${({ theme }) => theme.transitions.slow};
 `;

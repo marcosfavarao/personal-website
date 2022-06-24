@@ -17,8 +17,9 @@ export const Header = styled.header`
 
   a {
     text-decoration: underline;
-    transition: all 300ms;
+    transition: all ${({ theme }) => theme.transitions.fast};
     font-weight: bold;
+
     &:hover {
       color: ${({ theme }) => theme.colors.secondary};
     }
@@ -48,7 +49,7 @@ export const Block = styled.div`
 
   span {
     text-decoration: underline;
-    transition: all 300ms;
+    transition: all ${({ theme }) => theme.transitions.fast};
 
     &:hover {
       color: ${({ theme }) => theme.colors.secondary};

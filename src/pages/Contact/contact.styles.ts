@@ -47,7 +47,7 @@ export const Social = styled.div`
       width: 32px;
       height: 32px;
 
-      transition: all 300ms;
+      transition: all ${({ theme }) => theme.transitions.fast};
       &:hover {
         color: ${({ theme }) => theme.colors.secondary};
         transform: translateY(-4px);

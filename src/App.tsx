@@ -10,15 +10,9 @@ import { GlobalStyle } from './common/styles/globalStyles';
 export const App = () => {
   const [theme, setTheme] = useState(lightTheme);
 
-  const toggleTheme = () => {
+  const toggleTheme = useCallback(() => {
     setTheme((currentTheme) =>
-      currentTheme.title === 'lightTheme' ? darkTheme : lightTheme,
-    );
-  };
-
-  const defineTheme = useCallback(() => {
-    setTheme((currentTheme) =>
-      currentTheme.title === 'lightTheme' ? darkTheme : lightTheme,
+      currentTheme.title !== 'lightTheme' ? lightTheme : darkTheme,
     );
   }, []);
 

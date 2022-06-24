@@ -59,19 +59,19 @@ export const Sticker = styled.div`
   box-shadow: 0 0 4px 1px
     ${({ theme }) => transparentize(0.8, theme.colors.primary)};
 
-  transition: all 300ms;
+  transition: all ${({ theme }) => theme.transitions.fast};
 
   img {
     width: 64px;
     height: 64px;
     margin-left: 1rem;
-    transition: all 300ms;
     border-radius: 10px;
+    transition: all ${({ theme }) => theme.transitions.fast};
   }
 
   span {
     margin-left: 1rem;
-    transition: all 300ms;
+    transition: all ${({ theme }) => theme.transitions.fast};
   }
 
   &:hover {

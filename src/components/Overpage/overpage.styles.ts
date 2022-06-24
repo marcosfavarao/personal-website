@@ -50,8 +50,9 @@ export const Container = styled.div<ContainerProps>`
 
   transform: ${({ showPageContent }) =>
     showPageContent ? `translateY(0vh)` : `translateY(100vh)`};
-  transition: transform 800ms cubic-bezier(0.39, 0.575, 0.565, 1),
-    background 500ms;
+  transition: transform ${({ theme }) => theme.transitions.slow}
+      cubic-bezier(0.39, 0.575, 0.565, 1),
+    background ${({ theme }) => theme.transitions.slow};
 
   opacity: ${({ showPageContent }) => (showPageContent ? `1` : `0`)};
   pointer-events: ${({ showPageContent }) =>
@@ -60,10 +61,10 @@ export const Container = styled.div<ContainerProps>`
   ${({ showPageContent }) =>
     showPageContent
       ? css`
-          animation: ${showElement} 800ms;
+          animation: ${showElement} ${({ theme }) => theme.transitions.slow};
         `
       : css`
-          animation: ${hideElement} 800ms;
+          animation: ${hideElement} ${({ theme }) => theme.transitions.slow};
         `}
 `;
 
@@ -91,7 +92,9 @@ export const Header = styled.header<HeaderProps>`
 
     cursor: pointer;
 
-    transition: all 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: all ${({ theme }) => theme.transitions.fast}
+      cubic-bezier(0.39, 0.575, 0.565, 1);
+
     &:hover {
       color: ${({ theme }) => theme.colors.secondary};
       transform: translateY(8px);

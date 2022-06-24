@@ -39,35 +39,13 @@ const navbarAnimation = keyframes`
   }
 `;
 
-const buttonInFocusAnimation = keyframes`
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-`;
-
-const buttonOutFocusAnimation = keyframes`
-  0% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-`;
-
 const mobileArrowAnimation = keyframes`
   0% {
     -webkit-transform: translate3d(-50%, -10%, 0);
     transform: translate3d(-50%, -10%, 0);
   }
   50% {
-    -webkit-transform: translate3d(-50%, -25%, 0);
+    -webkit-transform: translate3d(-50%, -20%, 0);
     transform: translate3d(-50%, -20%, 0);
   }
   100% {
@@ -109,9 +87,11 @@ export const Profile = styled.section`
 
   text-align: center;
 
-  -webkit-animation: ${profileAnimation} 800ms
+  -webkit-animation: ${profileAnimation}
+    ${({ theme }) => theme.transitions.slow}
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: ${profileAnimation} 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: ${profileAnimation} ${({ theme }) => theme.transitions.slow}
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   img {
     width: 256px;
@@ -122,7 +102,7 @@ export const Profile = styled.section`
     border: 8px solid ${({ theme }) => theme.colors.secondary};
     border-radius: 256px;
 
-    transition: all 800ms;
+    transition: all ${({ theme }) => theme.transitions.slow};
   }
 
   h1 {
@@ -178,9 +158,10 @@ export const Navbar = styled.nav`
   justify-content: center;
   flex-direction: row;
 
-  -webkit-animation: ${navbarAnimation} 800ms
+  -webkit-animation: ${navbarAnimation} ${({ theme }) => theme.transitions.slow}
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: ${navbarAnimation} 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: ${navbarAnimation} ${({ theme }) => theme.transitions.slow}
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   @media (max-width: 915px) {
     opacity: 0;
@@ -202,20 +183,12 @@ export const NavbarButton = styled.button`
   text-align: center;
   text-transform: capitalize;
 
-  -webkit-animation: ${buttonOutFocusAnimation} 500ms
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: ${buttonOutFocusAnimation} 500ms
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-
-  transition: color 250ms;
+  transition: all ${({ theme }) => theme.transitions.fast};
   &:hover,
   &:focus {
     color: ${({ theme }) => theme.colors.secondary};
-
-    -webkit-animation: ${buttonInFocusAnimation} 500ms
-      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: ${buttonInFocusAnimation} 500ms
-      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
   }
 `;
 
@@ -237,7 +210,7 @@ export const MobileMenu = styled.div<MobileMenuProps>`
 
   transform: ${({ toggleMobileMenu }) =>
     toggleMobileMenu ? `translateY(0%)` : `translateY(-100%)`};
-  transition: all 800ms ease-in-out;
+  transition: all ${({ theme }) => theme.transitions.slow} ease-in-out;
 
   @media (max-width: 915px) {
     display: block;
@@ -282,7 +255,7 @@ export const MobileMenuHomeIcon = styled(IoMdMenu)`
   pointer-events: none;
   z-index: 100;
 
-  transition: all 800ms;
+  transition: all ${({ theme }) => theme.transitions.slow};
 
   @media (max-width: 915px) {
     opacity: 1;
