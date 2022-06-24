@@ -34,13 +34,13 @@ export const Container = styled.div`
 
   z-index: 100;
 
-  /* transition: all 800ms; */
+  transition: all ${({ theme }) => theme.transitions.slow};
   animation: ${showComponent} ${({ theme }) => theme.transitions.slow}
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   @media (max-width: 768px) {
     top: 32px;
-    right: 16px;
+    right: 32px;
   }
 `;
 

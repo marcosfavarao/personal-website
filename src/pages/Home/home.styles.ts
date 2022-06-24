@@ -8,6 +8,10 @@ interface MobileMenuProps {
   toggleMobileMenu: boolean;
 }
 
+interface MobileMenuHomeIconProps {
+  isMobileMenuOpen: boolean;
+}
+
 // Animations
 const profileAnimation = keyframes`
   0% {
@@ -243,16 +247,18 @@ export const MobileNavbarButton = styled.button`
   text-transform: capitalize;
 `;
 
-export const MobileMenuHomeIcon = styled(IoMdMenu)`
+export const MobileMenuHomeIcon = styled(IoMdMenu)<MobileMenuHomeIconProps>`
   width: 32px;
   height: 32px;
 
   position: absolute;
-  top: 25px;
-  left: 16px;
+  top: 24px;
+  left: 32px;
 
   opacity: 0;
-  pointer-events: none;
+  /* pointer-events: none; */
+  pointer-events: ${({ isMobileMenuOpen }) =>
+    isMobileMenuOpen ? `none` : `all`};
   z-index: 100;
 
   transition: all ${({ theme }) => theme.transitions.slow};
@@ -260,6 +266,15 @@ export const MobileMenuHomeIcon = styled(IoMdMenu)`
   @media (max-width: 915px) {
     opacity: 1;
     pointer-events: all;
+
+    top: 50px;
+  }
+
+  @media (max-width: 768px) {
+    opacity: 1;
+    pointer-events: all;
+
+    top: 24px;
   }
 `;
 

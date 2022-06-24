@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaSun } from 'react-icons/fa';
-import { RiMoonClearFill, RiAdminLine } from 'react-icons/ri';
+import { RiMoonClearFill } from 'react-icons/ri';
 
 import { useNavigation } from '../../hooks';
 import { Switcher } from '../../components';
@@ -37,7 +37,10 @@ export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
 
   return (
     <Container>
-      <MobileMenuHomeIcon onClick={() => setToggleMobileMenu(true)} />
+      <MobileMenuHomeIcon
+        onClick={() => setToggleMobileMenu(true)}
+        isMobileMenuOpen={toggleMobileMenu}
+      />
 
       <Switcher
         onCheck={onCheckTheme}

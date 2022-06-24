@@ -23,7 +23,7 @@ export const About = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                músic
+                music
               </a>
             </span>{' '}
             and travel. I am 26 years old and currently live in Ribeirão Preto,
