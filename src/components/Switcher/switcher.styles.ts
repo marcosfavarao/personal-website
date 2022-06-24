@@ -61,8 +61,7 @@ export const Toggler = styled.button<TogglerProps>`
   top: 50%;
   transform: ${({ onCheck }) =>
     onCheck ? `translate(58%, -50%)` : `translate(-2%, -50%)`};
-  transition: all ${({ theme }) => theme.transitions.fast}
-    cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all ${({ theme }) => theme.transitions.fast} ease-out;
 
   svg {
     color: ${({ theme }) => lighten(0.08, theme.colors.primary)};

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaSun } from 'react-icons/fa';
-import { RiMoonClearFill } from 'react-icons/ri';
+import { RiMoonClearFill, RiAdminLine } from 'react-icons/ri';
 
 import { useNavigation } from '../../hooks';
 import { Switcher } from '../../components';
@@ -51,7 +51,7 @@ export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
           <img src={profileImage} alt="profile" />
 
           <h1>Marcos A. L. Favarão</h1>
-          <h2>Software Engineer</h2>
+          <h2>Software Developer</h2>
           {/* <h2>Web Front-End Developer</h2> */}
         </Profile>
 
