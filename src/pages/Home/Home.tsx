@@ -5,7 +5,7 @@ import { RiMoonClearFill } from 'react-icons/ri';
 import { useNavigation } from '../../hooks';
 import { Switcher } from '../../components';
 
-import profileImg from '../../common/assets/images/profile-image.png';
+import { profileImage } from '../../common/assets/images';
 import {
   Container,
   Content,
@@ -48,7 +48,7 @@ export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
 
       <Content>
         <Profile>
-          <img src={profileImg} alt="profile" />
+          <img src={profileImage} alt="profile" />
 
           <h1>Marcos A. L. Favarão</h1>
           <h2>Software Engineer</h2>

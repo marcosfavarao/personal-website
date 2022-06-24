@@ -271,7 +271,6 @@ export const MobileNavbarButton = styled.button`
 `;
 
 export const MobileMenuHomeIcon = styled(IoMdMenu)`
-  /* background: ${({ theme }) => theme.colors.background}; */
   width: 32px;
   height: 32px;
 

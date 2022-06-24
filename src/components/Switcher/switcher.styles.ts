@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
+import { darken, lighten, transparentize } from 'polished';
 
-// Interfaces and Prop Types
+// Interfaces and Props
 interface TogglerProps {
   onCheck: boolean;
 }
@@ -19,7 +20,7 @@ const showComponent = keyframes`
 
 // Code Style
 export const Container = styled.div`
-  background: ${({ theme }) => theme.colors.primary};
+  background: ${({ theme }) => darken(0.08, theme.colors.primary)};
   width: 50px;
   height: 18px;
 
@@ -29,7 +30,7 @@ export const Container = styled.div`
   right: 64px;
 
   border: 0;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.28);
 
   z-index: 100;
 
@@ -62,8 +63,14 @@ export const Toggler = styled.button<TogglerProps>`
   transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   svg {
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => lighten(0.08, theme.colors.primary)};
     width: 20px;
     height: 20px;
+  }
+
+  &:hover {
+    filter: drop-shadow(
+      0 0 8px ${({ theme }) => transparentize(0.8, theme.colors.secondary)}
+    );
   }
 `;

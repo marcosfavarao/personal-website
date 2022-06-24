@@ -2,9 +2,11 @@ import { FaGithub } from 'react-icons/fa';
 import { useNavigation } from '../../hooks';
 import { Overpage } from '../../components';
 
-import project1Img from '../../common/assets/images/project1-image.png';
-import project2Img from '../../common/assets/images/project2-image.png';
-import project3Img from '../../common/assets/images/project3-image.png';
+import {
+  project01Image,
+  project02Image,
+  project03Image,
+} from '../../common/assets/images';
 import { Container, Header, Content, Card, CardTitle } from './projects.styles';
 
 export const Projects = () => {
@@ -30,7 +32,7 @@ export const Projects = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={project1Img} alt="Project 01" />
+            <img src={project01Image} alt="Project 01" />
             <FaGithub />
 
             <CardTitle>Portfolio</CardTitle>
@@ -41,7 +43,7 @@ export const Projects = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={project2Img} alt="Project 02" />
+            <img src={project02Image} alt="Project 02" />
             <FaGithub />
 
             <CardTitle>DT Money</CardTitle>
@@ -52,7 +54,7 @@ export const Projects = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={project3Img} alt="Project 03" />
+            <img src={project03Image} alt="Project 03" />
             <FaGithub />
             <CardTitle>Waffles Receipt</CardTitle>
           </Card>

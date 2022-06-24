@@ -33,19 +33,25 @@ export const Content = styled.section`
 `;
 
 export const Card = styled.a`
-  background: rgba(0, 0, 0, 0.04);
   width: 300px;
   height: 325px;
-
+  position: relative;
   margin: 1rem;
+  overflow: hidden;
+  cursor: pointer;
 
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid
+    ${({ theme }) =>
+      theme.title !== 'lightTheme'
+        ? transparentize(0.8, theme.colors.primary)
+        : theme.colors.primary};
   border-radius: 8px;
 
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+  box-shadow: 0 0 4px 1px
+    ${({ theme }) =>
+      theme.title !== 'lightTheme'
+        ? transparentize(0.8, theme.colors.primary)
+        : theme.colors.primary};
 
   transition: all 300ms;
 
@@ -76,7 +82,7 @@ export const Card = styled.a`
     color: ${({ theme }) => theme.colors.secondary};
     border: 1px solid
       ${({ theme }) => transparentize(0.8, theme.colors.secondary)};
-    box-shadow: 0 0 6px 1px
+    box-shadow: 0 0 4px 1px
       ${({ theme }) => transparentize(0.8, theme.colors.secondary)};
 
     svg {

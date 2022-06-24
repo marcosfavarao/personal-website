@@ -1,26 +1,28 @@
 import { useNavigation } from '../../hooks';
 import { Overpage } from '../../components';
 
-import icon01Img from '../../common/assets/images/icon01.png';
-import icon02Img from '../../common/assets/images/icon02.png';
-import icon03Img from '../../common/assets/images/icon03.png';
-import icon04Img from '../../common/assets/images/icon04.png';
-import icon05Img from '../../common/assets/images/icon05.png';
-import icon06Img from '../../common/assets/images/icon06.png';
-import icon07Img from '../../common/assets/images/icon07.png';
-import icon08Img from '../../common/assets/images/icon08.png';
-import icon09Img from '../../common/assets/images/icon09.png';
-import icon10Img from '../../common/assets/images/icon10.png';
-import icon11Img from '../../common/assets/images/icon11.png';
-import icon12Img from '../../common/assets/images/icon12.png';
-import icon13Img from '../../common/assets/images/icon13.png';
-import icon14Img from '../../common/assets/images/icon14.png';
-import icon15Img from '../../common/assets/images/icon15.png';
-import icon16Img from '../../common/assets/images/icon16.png';
-import icon17Img from '../../common/assets/images/icon17.png';
-import icon18Img from '../../common/assets/images/icon18.png';
-import icon19Img from '../../common/assets/images/icon19.png';
-import icon20Img from '../../common/assets/images/icon20.png';
+import {
+  icon01Img,
+  icon02Img,
+  icon03Img,
+  icon04Img,
+  icon05Img,
+  icon06Img,
+  icon07Img,
+  icon08Img,
+  icon09Img,
+  icon10Img,
+  icon11Img,
+  icon12Img,
+  icon13Img,
+  icon14Img,
+  icon15Img,
+  icon16Img,
+  icon17Img,
+  icon18Img,
+  icon19Img,
+  icon20Img,
+} from '../../common/assets/images';
 import { Container, Header, Content, Sticker } from './skills.styles';
 
 export const Skills = () => {
@@ -145,5 +147,3 @@ export const Skills = () => {
     </Overpage>
   );
 };
-
-// Skills

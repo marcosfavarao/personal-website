@@ -41,14 +41,17 @@ export const Block = styled.div`
   line-height: 2rem;
   text-align: left;
   margin: 2rem auto;
+
   p {
     margin-left: 22px;
   }
+
   span {
     text-decoration: underline;
     transition: all 300ms;
+
     &:hover {
-      color: var(--color-green);
+      color: ${({ theme }) => theme.colors.secondary};
     }
   }
 `;
