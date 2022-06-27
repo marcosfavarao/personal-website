@@ -31,7 +31,6 @@ const hideElement = keyframes`
 // Code Style
 export const Container = styled.div<ContainerProps>`
   background: ${({ theme }) => theme.colors.background};
-
   width: 100%;
   height: 98vh;
 

@@ -57,8 +57,8 @@ export const Toggler = styled.button<TogglerProps>`
   justify-content: center;
 
   position: absolute;
-  left: 0;
   top: 50%;
+  left: 0;
   transform: ${({ onCheck }) =>
     onCheck ? `translate(58%, -50%)` : `translate(-2%, -50%)`};
   transition: all ${({ theme }) => theme.transitions.fast} ease-out;

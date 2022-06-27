@@ -245,6 +245,12 @@ export const MobileNavbarButton = styled.button`
   line-height: 16px;
   text-align: center;
   text-transform: capitalize;
+
+  transition: color ${({ theme }) => theme.transitions.fast};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.secondary};
+  }
 `;
 
 export const MobileMenuHomeIcon = styled(IoMdMenu)<MobileMenuHomeIconProps>`
@@ -256,12 +262,16 @@ export const MobileMenuHomeIcon = styled(IoMdMenu)<MobileMenuHomeIconProps>`
   left: 32px;
 
   opacity: 0;
-  /* pointer-events: none; */
+  cursor: pointer;
   pointer-events: ${({ isMobileMenuOpen }) =>
     isMobileMenuOpen ? `none` : `all`};
   z-index: 100;
 
-  transition: all ${({ theme }) => theme.transitions.slow};
+  transition: all ${({ theme }) => theme.transitions.fast};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.secondary};
+  }
 
   @media (max-width: 915px) {
     opacity: 1;
@@ -284,6 +294,12 @@ export const MobileMenuArrowIcon = styled(IoIosArrowUp)`
   position: absolute;
   left: 50%;
   bottom: 0%;
+  cursor: pointer;
   transform: translate3d(-50%, -10%, 0);
+  transition: color ${({ theme }) => theme.transitions.fast};
   animation: ${mobileArrowAnimation} 4000ms infinite;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.secondary};
+  }
 `;

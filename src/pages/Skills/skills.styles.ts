@@ -75,6 +75,7 @@ export const Sticker = styled.div`
   }
 
   &:hover {
+    background: ${({ theme }) => transparentize(0.9, theme.colors.secondary)};
     border: 1px solid
       ${({ theme }) => transparentize(0.8, theme.colors.secondary)};
     box-shadow: 0 0 4px 1px
