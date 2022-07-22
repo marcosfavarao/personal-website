@@ -5,7 +5,6 @@ import { RiMoonClearFill } from 'react-icons/ri';
 import { useNavigation } from '../../hooks';
 import { Switcher } from '../../components';
 
-import { profileImage } from '../../common/assets/images';
 import {
   Container,
   Content,
@@ -51,11 +50,13 @@ export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
 
       <Content>
         <Profile>
-          <img src={profileImage} alt="profile" />
+          <img
+            src="https://ik.imagekit.io/marcosfavarao/dashboard/profile-image_QsrodP0ke.png?ik-sdk-version=javascript-1.4.3&updatedAt=1658446946466"
+            alt="profile"
+          />
 
           <h1>Marcos A. L. Favarão</h1>
           <h2>Software Developer</h2>
-          {/* <h2>Web Front-End Developer</h2> */}
         </Profile>
 
         <Navbar>
