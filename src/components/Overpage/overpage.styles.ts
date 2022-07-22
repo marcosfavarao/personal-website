@@ -42,7 +42,7 @@ export const Container = styled.div<ContainerProps>`
   right: 0;
 
   border: 0;
-  border-radius: 25px 25px 0 0;
+  border-radius: 1.5rem 1.5rem 0 0;
   box-shadow: 0px -4px 8px -1px rgba(0, 0, 0, 0.2);
 
   z-index: 99;
@@ -107,7 +107,7 @@ export const Header = styled.header<HeaderProps>`
     font-size: 3rem;
     font-weight: 700;
 
-    line-height: 64px;
+    line-height: 4rem;
     text-transform: capitalize;
   }
 `;
