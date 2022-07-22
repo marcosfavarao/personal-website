@@ -65,7 +65,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 4rem;
 
   @media (max-width: 915px) {
     margin: 0;
@@ -98,48 +98,46 @@ export const Profile = styled.section`
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   img {
-    width: 256px;
+    width: 16rem;
 
     object-fit: cover;
     margin-bottom: 2rem;
 
-    border: 8px solid ${({ theme }) => theme.colors.secondary};
-    border-radius: 256px;
+    border: 0.5rem solid ${({ theme }) => theme.colors.secondary};
+    border-radius: 16rem;
 
     transition: all ${({ theme }) => theme.transitions.slow};
   }
 
-  h1 {
+  h1,
+  h2 {
     font-size: 3rem;
     font-weight: 700;
 
-    line-height: 64px;
+    line-height: 4rem;
     text-transform: capitalize;
   }
 
   h2 {
     font-size: 2rem;
     font-weight: 600;
-
-    line-height: 64px;
-    text-transform: capitalize;
   }
 
   @media (max-width: 915px) {
     img {
-      width: 200px;
+      width: 12.5rem;
     }
 
     h1 {
       font-size: 2rem;
-      line-height: 32px;
+      line-height: 2rem;
     }
 
     h2 {
       font-size: 1.25rem;
       font-weight: 600;
 
-      line-height: 32px;
+      line-height: 2rem;
       text-transform: capitalize;
     }
   }
@@ -183,7 +181,7 @@ export const NavbarButton = styled.button`
 
   font-size: 2rem;
   font-weight: 600;
-  line-height: 32px;
+  line-height: 2rem;
   text-align: center;
   text-transform: capitalize;
 
@@ -235,14 +233,14 @@ export const MobileNavbar = styled.nav`
 export const MobileNavbarButton = styled.button`
   background: transparent;
 
-  width: 80px;
-  height: 40px;
+  width: 5rem;
+  height: 2.5rem;
   margin: 0.25rem 0;
 
   border: 0;
   font-size: 1rem;
   font-weight: 600;
-  line-height: 16px;
+  line-height: 1rem;
   text-align: center;
   text-transform: capitalize;
 
@@ -254,12 +252,12 @@ export const MobileNavbarButton = styled.button`
 `;
 
 export const MobileMenuHomeIcon = styled(IoMdMenu)<MobileMenuHomeIconProps>`
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
 
   position: absolute;
-  top: 24px;
-  left: 32px;
+  top: 1.5rem;
+  left: 2rem;
 
   opacity: 0;
   cursor: pointer;
@@ -277,20 +275,20 @@ export const MobileMenuHomeIcon = styled(IoMdMenu)<MobileMenuHomeIconProps>`
     opacity: 1;
     pointer-events: all;
 
-    top: 50px;
+    top: 3rem;
   }
 
   @media (max-width: 768px) {
     opacity: 1;
     pointer-events: all;
 
-    top: 24px;
+    top: 1.5rem;
   }
 `;
 
 export const MobileMenuArrowIcon = styled(IoIosArrowUp)`
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   position: absolute;
   left: 50%;
   bottom: 0%;
