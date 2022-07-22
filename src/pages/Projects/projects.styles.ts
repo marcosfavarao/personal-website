@@ -45,7 +45,7 @@ export const Card = styled.a`
       theme.title !== 'lightTheme'
         ? transparentize(0.8, theme.colors.primary)
         : theme.colors.primary};
-  border-radius: 8px;
+  border-radius: 0.5rem;
 
   box-shadow: 0 0 4px 1px
     ${({ theme }) =>
@@ -57,8 +57,8 @@ export const Card = styled.a`
 
   svg {
     color: ${({ theme }) => transparentize(0.4, theme.colors.secondary)};
-    width: 50px;
-    height: 50px;
+    width: 3rem;
+    height: 3rem;
 
     position: absolute;
     top: calc(50% - 16px);

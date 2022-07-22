@@ -2,11 +2,6 @@ import { FaGithub } from 'react-icons/fa';
 import { useNavigation } from '../../hooks';
 import { Overpage } from '../../components';
 
-import {
-  project01Image,
-  project02Image,
-  project03Image,
-} from '../../common/assets/images';
 import { Container, Header, Content, Card, CardTitle } from './projects.styles';
 
 export const Projects = () => {
@@ -32,7 +27,10 @@ export const Projects = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={project01Image} alt="Project 01" />
+            <img
+              src="https://ik.imagekit.io/marcosfavarao/dashboard/personal-website/project01_UzTUP3v0A.png?ik-sdk-version=javascript-1.4.3&updatedAt=1658447322244"
+              alt="Project 01"
+            />
             <FaGithub />
 
             <CardTitle>Portfolio</CardTitle>
@@ -43,7 +41,10 @@ export const Projects = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={project02Image} alt="Project 02" />
+            <img
+              src="https://ik.imagekit.io/marcosfavarao/dashboard/personal-website/project02_SpzOFGsHS.png?ik-sdk-version=javascript-1.4.3&updatedAt=1658447321426"
+              alt="Project 02"
+            />
             <FaGithub />
 
             <CardTitle>DT Money</CardTitle>
@@ -54,7 +55,10 @@ export const Projects = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={project03Image} alt="Project 03" />
+            <img
+              src="https://ik.imagekit.io/marcosfavarao/dashboard/personal-website/project03_fSkRI_EP-.png?ik-sdk-version=javascript-1.4.3&updatedAt=1658447324038"
+              alt="Project 03"
+            />
             <FaGithub />
             <CardTitle>Waffles Receipt</CardTitle>
           </Card>
