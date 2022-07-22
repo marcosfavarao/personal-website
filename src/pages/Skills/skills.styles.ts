@@ -55,17 +55,17 @@ export const Sticker = styled.div`
       theme.title !== 'lightTheme'
         ? transparentize(0.8, theme.colors.primary)
         : theme.colors.primary};
-  border-radius: 8px;
+  border-radius: 0.5rem;
   box-shadow: 0 0 4px 1px
     ${({ theme }) => transparentize(0.8, theme.colors.primary)};
 
   transition: all ${({ theme }) => theme.transitions.fast};
 
   img {
-    width: 64px;
-    height: 64px;
+    width: 4rem;
+    height: 4rem;
     margin-left: 1rem;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     transition: all ${({ theme }) => theme.transitions.fast};
   }
 
@@ -83,13 +83,13 @@ export const Sticker = styled.div`
   }
 
   @media (max-width: 915px) {
-    width: 150px;
-    height: 80px;
+    width: 10rem;
+    height: 5rem;
     font-size: 0.8rem;
 
     img {
-      width: 50px;
-      height: 50px;
+      width: 3rem;
+      height: 3rem;
     }
 
     span {
