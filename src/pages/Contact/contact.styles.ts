@@ -44,8 +44,8 @@ export const Social = styled.div`
     margin: 1rem;
 
     svg {
-      width: 32px;
-      height: 32px;
+      width: 2rem;
+      height: 2rem;
 
       transition: all ${({ theme }) => theme.transitions.fast};
       &:hover {
