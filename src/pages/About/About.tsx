@@ -16,7 +16,7 @@ export const About = () => {
         <Header>
           <p>
             &apos;Hello World&apos;, my name is <b>Marcos Favarão</b>, a
-            software engineer passionate about technology,{' '}
+            software developer passionate about technology,{' '}
             <span>
               <a
                 href="https://open.spotify.com/user/g55nb1mqoasclcvzgmqmys7o6"

@@ -44,7 +44,7 @@ export const Block = styled.div`
   margin: 2rem auto;
 
   p {
-    margin-left: 22px;
+    margin-left: 1.25rem;
   }
 
   span {
