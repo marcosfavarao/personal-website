@@ -21,13 +21,13 @@ const showComponent = keyframes`
 // Code Style
 export const Container = styled.div`
   background: ${({ theme }) => darken(0.08, theme.colors.primary)};
-  width: 50px;
-  height: 18px;
+  width: 3rem;
+  height: 1rem;
 
-  border-radius: 20px;
+  border-radius: 1.5rem;
   position: fixed;
-  top: 64px;
-  right: 64px;
+  top: 4rem;
+  right: 4rem;
 
   border: 0;
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.28);
@@ -39,18 +39,18 @@ export const Container = styled.div`
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   @media (max-width: 768px) {
-    top: 32px;
-    right: 32px;
+    top: 2rem;
+    right: 2rem;
   }
 `;
 
 export const Toggler = styled.button<TogglerProps>`
   background: ${({ theme }) => theme.colors.secondary};
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
 
   border: 0;
-  border-radius: 32px;
+  border-radius: 2rem;
 
   display: flex;
   align-items: center;
@@ -65,8 +65,8 @@ export const Toggler = styled.button<TogglerProps>`
 
   svg {
     color: ${({ theme }) => lighten(0.08, theme.colors.primary)};
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
   }
 
   &:hover {
