@@ -57,7 +57,7 @@ export const data = {
     },
     {
       id: 12,
-      name: 'Miragejs',
+      name: 'MirageJS',
       icon: 'https://ik.imagekit.io/marcosfavarao/dashboard/development-icons/minimalists/miragejs-256-minimalist_BF4EZjM5G.png?ik-sdk-version=javascript-1.4.3&updatedAt=1659227363541',
     },
     {
