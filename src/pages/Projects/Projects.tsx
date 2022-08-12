@@ -28,7 +28,7 @@ export const Projects = () => {
             rel="noreferrer"
           >
             <img
-              src="https://ik.imagekit.io/marcosfavarao/dashboard/personal-website/project01_UzTUP3v0A.png?ik-sdk-version=javascript-1.4.3&updatedAt=1658447322244"
+              src="https://ik.imagekit.io/marcosfavarao/dashboard/personal-website/portfolio_0XcoUg8GH.png?ik-sdk-version=javascript-1.4.3&updatedAt=1660342943199"
               alt="Project 01"
             />
             <FaGithub />
@@ -37,30 +37,30 @@ export const Projects = () => {
           </Card>
 
           <Card
+            href="https://github.com/marcosfavarao/todo-app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="https://ik.imagekit.io/marcosfavarao/dashboard/personal-website/todo-app_4a7awItHk.png?ik-sdk-version=javascript-1.4.3&updatedAt=1660342942779"
+              alt="Project 02"
+            />
+            <FaGithub />
+            <CardTitle>To-do App</CardTitle>
+          </Card>
+
+          <Card
             href="https://github.com/marcosfavarao/ignite-reactjs-chapter-2"
             target="_blank"
             rel="noreferrer"
           >
             <img
-              src="https://ik.imagekit.io/marcosfavarao/dashboard/personal-website/project02_SpzOFGsHS.png?ik-sdk-version=javascript-1.4.3&updatedAt=1658447321426"
-              alt="Project 02"
+              src="https://ik.imagekit.io/marcosfavarao/dashboard/personal-website/dt-money_unZ9wI3fm.png?ik-sdk-version=javascript-1.4.3&updatedAt=1660342942681"
+              alt="Project 03"
             />
             <FaGithub />
 
             <CardTitle>DT Money</CardTitle>
-          </Card>
-
-          <Card
-            href="https://github.com/marcosfavarao/waffles-receipt"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src="https://ik.imagekit.io/marcosfavarao/dashboard/personal-website/project03_fSkRI_EP-.png?ik-sdk-version=javascript-1.4.3&updatedAt=1658447324038"
-              alt="Project 03"
-            />
-            <FaGithub />
-            <CardTitle>Waffles Receipt</CardTitle>
           </Card>
         </Content>
       </Container>

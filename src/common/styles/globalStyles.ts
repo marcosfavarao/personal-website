@@ -6,6 +6,16 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+
+    ::-moz-selection {
+      color: ${({ theme }) => theme.colors.text};
+      background: ${({ theme }) => theme.colors.secondary};
+    }
+
+    ::selection {
+      color: ${({ theme }) => theme.colors.text};
+      background: ${({ theme }) => theme.colors.secondary};
+    }
   };
 
   html {
