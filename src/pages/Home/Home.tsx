@@ -51,12 +51,12 @@ export const Home = ({ onCheckTheme, onChangeTheme }: HomeProps) => {
       <Content>
         <Profile>
           <img
-            src="https://ik.imagekit.io/marcosfavarao/dashboard/profile-image_QsrodP0ke.png?ik-sdk-version=javascript-1.4.3&updatedAt=1658446946466"
+            src="https://ik.imagekit.io/marcosfavarao/dashboard/personal-website/profile-picture_IwcbyrGSSu.png?updatedAt=1685316192112"
             alt="profile"
           />
 
           <h1>Marcos A. L. Favarão</h1>
-          <h2>Software Developer</h2>
+          <h2>Sênior Frontend Developer</h2>
         </Profile>
 
         <Navbar>
